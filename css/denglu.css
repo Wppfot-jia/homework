@@ -1,0 +1,178 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family:"Microsoft Yahei";
+	background-color:#f7fafc;
+}
+.contain{
+	width:1800px;
+	height:700px;
+	margin:0 auto;
+}
+.contain-1{
+	width:330px;
+	height:640px;
+	background-color:#f7fafc;
+	left:50%;
+	margin-left:-165px;
+	top:50%;
+	margin-top:-320px;
+	position:absolute;
+}
+.head ul{
+	list-style-type:none;
+}
+.head ul li{
+	width:330px;
+	height:80px;
+	
+}
+.head ul .te1{
+	left:78px;
+	position:relative;
+}
+.head ul .te2{
+	font-size:20px;
+	text-align:center;
+	margin-top:20px;
+}
+.zhuche:link,.denglu:link{
+	color:#939495;
+	font-size:30px;
+	text-decoration:none;
+	font-size:large;
+}
+.zhuche:visited,.denglu:visited{
+	color:#939495;
+}
+.zhuche:hover,.denglu:hover{
+	color:#0f88eb;
+    display:block;
+}
+.zhuche{
+	display:block;
+	margin-top:-30px;
+	margin-left:100px;
+}
+.denglu{
+	display:block;
+	margin-top:-80px;
+	margin-left:180px;
+}
+.na1{
+	position:absolute;
+	left:85px;
+	top:180px;
+	margin:0 .8em;
+	width:2.4em;
+	height:2px;
+	background:#0f88eb;
+}
+.na2{
+	position:absolute;
+	left:165px;
+	top:180px;
+	margin:0 .8em;
+	width:2.4em;
+	height:2px;
+	background:#0f88eb;
+}
+.input1 input{
+	width:328px;
+	height:46px;
+	top:-35px;
+	font-size:100%;
+	position:relative;
+}
+.te3,.te4,.te5{
+	position:relative;
+	display:block;
+}
+.te3{
+	top:-31px;
+}
+.te4{
+    top:-62px;
+}
+.te5{
+    top:-93px;
+}
+.input1 .te6{
+	display:block;
+	width:330px;
+	height:45px;
+	background-color:#0f88eb;
+	position:relative;
+	top:-138px;
+	border-radius:3px;
+	text-align:center;
+	line-height:45px;
+}
+.input1 .pp a:link{
+	font-weight:bold;
+	color:#FFF;
+	text-decoration:none;
+}
+.input1 .pp a:hover{
+    color:#55abed;
+}
+.input1 .te7{
+	position:relative;
+	display:block;
+	top:-100px;
+}
+.input1 .te7{
+	text-align:center;
+	line-height:0px;
+}
+.input1 .te7 span{
+	color:#a1a2a2;
+	font-size:x-small;
+}
+
+.input1 .te7 a:hover{
+    color:#55abed;
+}
+.input1 .te8{
+	display:block;
+	width:330px;
+	height:45px;
+	border:1px solid #96c2e9;
+	position:relative;
+	top:-112px;
+	border-radius:3px;
+	text-align:center;
+	line-height:45px;
+}
+
+.bottom-first{
+	text-align:center;
+    width:1800px;
+	height:20px;
+	position:absolute;
+	left:50%;
+	margin-left:-900px;
+	bottom:25px;
+}
+.bottom{
+	color:#b2c1cc;
+	font-size:small;
+}
+.bottom a:link{
+	color:#b2c1cc;
+	text-decoration:none;
+}
+.bottom-secend{
+    text-align:center;
+    width:1800px;
+	height:20px;
+	position:absolute;
+	left:50%;
+	margin-left:-900px;
+	bottom:5px;
+}
+.dot{
+	margin:0 3px}
+}
