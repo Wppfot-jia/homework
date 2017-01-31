@@ -4,8 +4,6 @@
         <meta charset="utf-8">
         <title>写文章 - 知乎专栏</title>
         <link href="../css/question.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript">
-        </script>
     </head>
     <body>
         <div class="top">
@@ -14,22 +12,98 @@
                 <span class="write">写文章</span>
                 <span class="save">草稿自动保存</span>
             </div>
-            <a href="index.html" target="_blank"><img class="img-2" src="../img/tip.png"></a>
+            <a href="index.html" target="_blank" onmouseover="onmouseoverHelp()" onmouseout="onmouseoutHelp()"><img class="img-2" src="../img/tip.png"></a>
             <div class="send">发布</div>
             <span class="see">邀请预览</span>
+            <div class="help" id="help">
+                <ul>
+                    <a href="#" ><li name="help" id="$1" value="$1" onmouseover="checkColor()" onmouseout="returnColor()">写文章</li></a>
+                    <a href="#" ><li name="help" id="$2" value="$2" onmouseover="checkColor()" onmouseout="returnColor()">草稿</li></a>
+                    <a href="#" ><li name="help" id="$3" value="$3" onmouseover="checkColor()" onmouseout="returnColor()">我的文章</li></a>
+                    <a href="#" ><li name="help" id="$4" value="$4" onmouseover="checkColor()" onmouseout="returnColor()">专栏发现</li></a>
+                    <a href="#" ><li name="help" id="$5" value="$5" onmouseover="checkColor()" onmouseout="returnColor()">删除草稿</li></a>
+                </ul>
+            </div>
         </div>
         <div class="contain">
             <div class="image">
                 <input class="image_input" type="file" accept=".jpeg, .jpg, .png">
             </div>
             
-            <input type="text" class="title" value="请输入标题">
+            <input type="text" class="title" id="title" value="请输入标题" onfocus="onfocusTitle()" onblur="onblurTitle()">
             
             <div class="tool">
             </div>
-            <textarea class="text_part">
-            </textarea>
-            
+            <textarea class="text_part" id="text_part"  onfocus="onfocusTextPart()" onblur="onblurTextPart()">请输入正文</textarea>
         </div>
+    <script type="text/javascript">
+        function $(id){
+            return document.getElementById(id);
+        }
+        function onfocusTitle(){
+            var title = $("title");
+            if(title.value == "请输入标题"){
+                title.style.color = "#333333";
+                title.value = "";
+            }
+        }
+        function onblurTitle(){
+            var title = $("title");
+            if(title.value == ""){
+                title.style.color = "#b3b3b3";
+                title.value = "请输入标题";
+            }
+        }
+        
+        function onfocusTextPart(){
+            var text_part = $("text_part");
+            if(text_part.innerHTML == "请输入正文"){
+                text_part.className = "text_part1";
+                text_part.innerHTML = "";
+            }
+        }
+        var text_part = $("text_part");
+            if(text_part.innerHTML == "请输入正文"){
+                text_part.className = "text_part";
+            }
+        function onblurTextPart(){
+            var text_part = $("text_part");
+            if(text_part.innerHTML == ""){
+                text_part.className = "text_part";
+                text_part.innerHTML = "请输入正文";
+            }
+        }
+        function onmouseoverHelp(){
+            var help = $("help");
+            help.style.display = "block";
+        }
+        function onmouseoutHelp(){
+            var help = $("help");
+            help.style.display = "none";
+        }
+        // function checkColor(){
+        //     var $1 = $("$1");
+        //     var $2 = $("$2");
+        //     var $3 = $("$3");
+        //     var $4 = $("$4");
+        //     var $5 = $("$5");
+        //     var myname = document.getElementsByName("help");
+        //     alert(myname.value);
+        //     if(myname.value == "$1"){
+        //         $1.style.backgroundColor = "yellow";
+        //         alert("ddd");
+        //     }else if(myname.value == "$2"){
+        //         $2.style.backgroundColor = "blue";
+        //     }
+
+            
+            
+            
+        //     $3.style.backgroundColor = "yellow";
+        //     $4.style.backgroundColor = "yellow";
+        //     $5.style.backgroundColor = "yellow";
+
+        // }
+    </script>
     </body>
 </html>
