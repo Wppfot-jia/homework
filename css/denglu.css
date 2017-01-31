@@ -85,19 +85,21 @@ body{
 	top:-35px;
 	font-size:100%;
 	position:relative;
+	outline:medium;
 }
 .te3,.te4,.te5{
 	position:relative;
 	display:block;
 }
 .te3{
-	top:-31px;
+	top:-32px;
 }
 .te4{
-    top:-62px;
+    top:-64px;
 }
 .te5{
-    top:-93px;
+    top:-96px;
+    display:none;
 }
 .input1 .te6{
 	display:block;
@@ -109,6 +111,9 @@ body{
 	border-radius:3px;
 	text-align:center;
 	line-height:45px;
+}
+.pp{
+	margin-top:30px;
 }
 .input1 .pp a:link{
 	font-weight:bold;
