@@ -19,22 +19,84 @@
 	            	<span class="na1"></span>
 	            	<span class="na2"></span>
 	            </ul>
-	            <ul class="input1">
-	            	
-	            	<form action="./webpage/index.html" method="post"> 
-	 	            	<li><input type="text" id="name" value="" name="" placeholder="姓名"></li>
-		            	<li class="te3"><input type="text" name="" placeholder="手机号(仅支持中国大陆)"></li>
-		            	<li class="te4"><input type="password" name="" placeholder="密码(不少于6位)"></li>
-		            	<li class="te5" ><input type="text" name="" placeholder="验证码"></li>
-		            	<div class="pp"><a href="#" onclick="zc()"><li class="te6"><span class="wenzhi">注册知乎</span></li></a></div>
+	            
+	            <ul class="input1" id="input1">
+	            	<form action="./webpage/success.html" method="post" onsubmit="return checkForm()"> 
+	 	            	<li>
+	 	            	    <input type="text" id="name" onblur="onblurName()" value="" name="" placeholder="姓名">
+	 	            	    <span class="" id="s_name"></span>
+	 	            	</li>
+	 	            	
+		            	
+		            	<li class="te3">
+			            	<input type="text" id="tel" onblur="onblurTel()" name="" placeholder="手机号(仅支持中国大陆)">
+			            	<span class="" id="s_tel"></span>
+		            	</li>
+		            	
+		            	<li class="te4">
+			            	<input type="password" id="pwd" onblur="onblurPwd()" name="" placeholder="密码(不少于6位)">
+			            	<span class="" id="s_pwd"></span>
+		            	</li>
+		            	
+		            	<li class="te5" id="te5" >
+		            	    <input type="text" id="check" onblur="onblurCheck()" name="" placeholder="验证码">
+		            	    <span class="" id="s_check"></span>
+		            	    <img class="imgck" title="看不清楚?换一张" src="./img/check.png">
+		            	</li>
+		            	
+                        <div class="pp">
+                           
+                                <li>
+                                    <input type="submit" id="wenzhi"  class="wenzhi" value="注册知乎">
+                                </li>
+                         
+                        </div>
+
+                        <li class="te7" id="te7"><span>点击「注册」按钮，即代表你同意<a href="http://www.zhihu.com/terms" target="_block">《知乎协议》</a></span></li>
+		            
 		            </form>
-
-
-	            	
-	            	
-	            	<li class="te7"><span>点击「注册」按钮，即代表你同意<a href="http://www.zhihu.com/terms" target="_block">《知乎协议》</a></span></li>
-	            	<a href="#"><li class="te8">下载知乎App</li></a>
+                    <a href="#"><li class="te8" id="te8">下载知乎App</li></a>
 	            </ul>
+
+	            <ul class="input2" id="input2">
+	                <form action="./webpage/index.html" method="post" onsubmit="return checkForm_dl()">
+	                    <li>
+	 	            	    <input type="text" id="name2" onblur="onblurName2()" value="" name="" placeholder="手机号或邮箱">
+	 	            	    <span class="" id="s_name2"></span>
+	 	            	</li>
+	 	            	<li class="pwd">
+			            	<input type="password" id="pwd2" name="" placeholder="密码">
+			            	<span class="" id="s_pwd2"></span>
+			            </li>
+			            <li class="code">
+			                <p>请点击图片中所有倒立的文字</p>
+			                <img class="refresh" src="./img/refresh.png">
+			                <img class="code-img" src="./img/code.png">
+			            </li>
+			            <li>
+			                <input class="sign" type="submit" value="登录">
+			            </li>
+			            
+                        <div class="other-way">
+			                <p class="diff1">手机验证码登录</p>
+			                <p class="diff2">无法登录?</p>
+			                <p class="diff3">社交账号登录</p>
+			            </div>
+			        
+			        </form>
+			        <a href="#"><li class="te8" id="te8">下载知乎App</li></a>
+			    </ul>
+
+
+
+
+
+
+
+
+
+
+	        
 	        </div>
 	    </div>
 	    <div class="bottom">
@@ -62,8 +124,136 @@
 	        </div>
 	    </div>
     </div>
-    <script src="./javascript/dl_script.js" type="text/javascript">
+    <script type="text/javascript">
+        function $(id){
+        	return document.getElementById(id);
+        }
+        function zhuche(){
+            var input1 = $("input1");
+            var input2 = $("input2");
+            input1.style.display = "block";
+            input2.style.display = "none";
+        }
+        function denglu(){
+            var input1 = $("input1");
+            var input2 = $("input2");
+            input1.style.display = "none";
+            input2.style.display = "block";
+        }
+        
+
+
+
+
+
+
+
+
+
+        function checkForm(){
+        	if(!onblurName()){
+        		return false;
+        	}else if(!onblurTel()){
+        		return false;
+        	}else if(!onblurPwd()){
+                return false;
+        	}else if(!onblurCheck()){
+                return false;
+        	}else{
+        		return true;
+        	}
+        }
+        
+        var te5 = $("te5");
+            te5.style.display = "none";
+       
+        function onblurName(){
+        	var span = $("s_name");
+        	var name = $("name");
+        	var te5 = $("te5");
+        	var wenzhi = $("wenzhi");
+        	var te7 = $("te7");
+        	var te8 = $("te8");
+        	if(name.value == ""){
+        		span.innerHTML = "请输入姓名！";
+                span.className = "msg2";
+                return false;
+        	}else{
+        		span.innerHTML = "<img src='./img/true.png'>";
+                span.className = "msg";
+                te5.style.display = "block";
+                wenzhi.style.top = "-172px";
+                te7.style.top = "-142px";
+                te8.style.top = "-155px";
+                return true;
+        	}
+        }
+        
+
+        function onblurTel(){
+        	var tel = $("tel");
+        	var span = $("s_tel");
+        	if(tel.value == ""){
+        		span.innerHTML = "请输入手机号！";
+                span.className = "msg2";
+                return false;
+            }else if(!(tel.value.length == "11")){
+        		span.innerHTML = "手机号格式不正确！";
+                span.className = "msg2";
+            }else{
+            	span.innerHTML = "<img src='./img/true.png'>";
+                span.className = "msg";
+                return true;
+            }
+        }
     	
+    	function onblurPwd(){
+    		var pwd = $("pwd");
+    		var span = $("s_pwd");
+    		if(pwd.value == ""){
+    			span.innerHTML = "密码不能为空！";
+                span.className = "msg2";
+                return false;
+    		}else if(pwd.value.length < 6){
+                span.innerHTML = "密码位数必须大于6位！";
+                span.className = "msg2";
+                return false;
+    		}else{
+    			span.innerHTML = "<img src='./img/true.png'>";
+                span.className = "msg";
+                return true;
+    		}
+    	}
+    	
+    	function onblurCheck(){
+    		var check = $("check");
+            var span = $("s_check");
+            if(check.value == ""){
+            	span.innerHTML = "验证码不能为空！";
+                span.className = "msg2";
+                return false;
+            }else if(!(check.value == "TK5S")){
+            	span.innerHTML = "验证码错误！";
+                span.className = "msg2";
+                return false;
+            }else{
+            	span.innerHTML = "<img src='./img/true.png'>";
+                span.className = "msg";
+                return true;
+            }
+    	}
+
+    	function checkForm_dl(){
+
+    	}
+    	function onblurName2(){
+    		var name2 = $("name2");
+    		var span = $("s_name2");
+    		if(name2.value == ""){
+    			span.className = "msg2";
+    			span.innerHTML = "请输入邮箱或手机号！";
+    		}
+    	}
     </script> 
     </body>
 </html>

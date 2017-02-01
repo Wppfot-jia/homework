@@ -3,7 +3,8 @@
 	padding:0;
 }
 body{
-	font-family:"Microsoft Yahei";
+	font-family:'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
+;
 	background-color:#f7fafc;
 }
 .contain{
@@ -79,6 +80,9 @@ body{
 	height:2px;
 	background:#0f88eb;
 }
+.input1{
+	display:block;
+}
 .input1 input{
 	width:328px;
 	height:46px;
@@ -86,6 +90,7 @@ body{
 	font-size:100%;
 	position:relative;
 	outline:medium;
+
 }
 .te3,.te4,.te5{
 	position:relative;
@@ -99,9 +104,126 @@ body{
 }
 .te5{
     top:-96px;
-    display:none;
 }
-.input1 .te6{
+.te5 .imgck{
+	position:relative;
+	top:-82px;
+	width:30%;
+	float:right;
+}
+.input2{
+	display:none;
+}
+.input2 input{
+	width:328px;
+	height:46px;
+	top:-35px;
+	font-size:100%;
+	position:relative;
+	outline:medium;
+}
+#pwd{
+	position:relative;
+	top:-35px;
+}
+#pwd2{
+	position:relative;
+	top:-67px;
+}
+.code{
+	width:328px;
+	height:90px!important;
+	position:relative;
+	top:-99px;
+	background-color:rgb(250,250,250);
+	border:1px solid rgb(169,169,169);
+    color:rgb(85,85,85);
+    font-size:15px;
+}
+.code p{
+	margin-left:15px;
+	margin-top:5px;
+}
+.code .refresh{
+	float:right;
+	margin-top:-20px;
+	margin-right:10px;
+	width:8%;
+}
+.code-img{
+    position:relative;
+    left:16%;
+    top:8px;
+}
+.input2 .sign{
+	width:330px!important;
+    background-color:rgb(15,136,235);
+    border:none;
+    border-radius:5px;
+    position:relative;
+    top:-79px;
+    color:#ffffff;
+	font-size:20px;
+    font-weight:550
+}
+.input2 .te8{
+	display:block;
+	width:330px;
+	height:45px;
+	border:1px solid #96c2e9;
+	position:relative;
+	top:-90px;
+	border-radius:3px;
+	text-align:center;
+	line-height:45px;
+}
+.other-way{
+	width:330px;
+	height:80px;
+	position:relative;
+	top:-94px;
+
+}
+.other-way p{
+	font-size:15PX;
+}
+.diff1{
+	color:rgb(92,165,232);
+	float:left;
+}
+.diff2{
+	color:rgb(85,85,85);
+	float:right;
+}
+.diff3{
+	color:rgb(85,85,85);
+	position:relative;
+	top:40px;
+    left:-105px;
+}
+
+
+.msg2{
+    color:#ff3333;
+    background-color:#ffcc99;
+    height:10px;
+    border:solid 1px gray;
+    line-height:18px;
+    font-size:12px;
+    padding:5px 10px;
+    position:relative;
+    left:339px;
+    top:-73px;
+}
+.msg{
+	position:relative;
+    left:339px;
+    top:-70px;
+    height:18px;
+    position:relative;
+    background-color:#f8f7f7;
+}
+.input1 .wenzhi{
 	display:block;
 	width:330px;
 	height:45px;
@@ -111,6 +233,10 @@ body{
 	border-radius:3px;
 	text-align:center;
 	line-height:45px;
+	border:none;
+	color:#ffffff;
+	font-size:20px;
+    font-weight:550;
 }
 .pp{
 	margin-top:30px;
@@ -126,7 +252,7 @@ body{
 .input1 .te7{
 	position:relative;
 	display:block;
-	top:-100px;
+	top:-120px;
 }
 .input1 .te7{
 	text-align:center;
@@ -134,7 +260,7 @@ body{
 }
 .input1 .te7 span{
 	color:#a1a2a2;
-	font-size:x-small;
+	font-size:14px;
 }
 
 .input1 .te7 a:hover{
