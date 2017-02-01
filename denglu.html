@@ -19,41 +19,31 @@
 	            	<span class="na1"></span>
 	            	<span class="na2"></span>
 	            </ul>
-	            
 	            <ul class="input1" id="input1">
 	            	<form action="./webpage/success.html" method="post" onsubmit="return checkForm()"> 
 	 	            	<li>
 	 	            	    <input type="text" id="name" onblur="onblurName()" value="" name="" placeholder="姓名">
 	 	            	    <span class="" id="s_name"></span>
 	 	            	</li>
-	 	            	
-		            	
-		            	<li class="te3">
+	 	            	<li class="te3">
 			            	<input type="text" id="tel" onblur="onblurTel()" name="" placeholder="手机号(仅支持中国大陆)">
 			            	<span class="" id="s_tel"></span>
 		            	</li>
-		            	
 		            	<li class="te4">
 			            	<input type="password" id="pwd" onblur="onblurPwd()" name="" placeholder="密码(不少于6位)">
 			            	<span class="" id="s_pwd"></span>
 		            	</li>
-		            	
 		            	<li class="te5" id="te5" >
 		            	    <input type="text" id="check" onblur="onblurCheck()" name="" placeholder="验证码">
 		            	    <span class="" id="s_check"></span>
 		            	    <img class="imgck" title="看不清楚?换一张" src="./img/check.png">
 		            	</li>
-		            	
-                        <div class="pp">
-                           
+		            	<div class="pp">
                                 <li>
                                     <input type="submit" id="wenzhi"  class="wenzhi" value="注册知乎">
                                 </li>
-                         
                         </div>
-
                         <li class="te7" id="te7"><span>点击「注册」按钮，即代表你同意<a href="http://www.zhihu.com/terms" target="_block">《知乎协议》</a></span></li>
-		            
 		            </form>
                     <a href="#"><li class="te8" id="te8">下载知乎App</li></a>
 	            </ul>
@@ -65,7 +55,7 @@
 	 	            	    <span class="" id="s_name2"></span>
 	 	            	</li>
 	 	            	<li class="pwd">
-			            	<input type="password" id="pwd2" name="" placeholder="密码">
+			            	<input type="password" onblur="onblurPwd2()" id="pwd2" name="" placeholder="密码">
 			            	<span class="" id="s_pwd2"></span>
 			            </li>
 			            <li class="code">
@@ -76,44 +66,31 @@
 			            <li>
 			                <input class="sign" type="submit" value="登录">
 			            </li>
-			            
-                        <div class="other-way">
+			            <div class="other-way">
 			                <p class="diff1">手机验证码登录</p>
 			                <p class="diff2">无法登录?</p>
 			                <p class="diff3">社交账号登录</p>
 			            </div>
-			        
 			        </form>
-			        <a href="#"><li class="te8" id="te8">下载知乎App</li></a>
+			        <div class="download"><a href="#"><li class="te8" id="te8">下载知乎App</a></li></div>
 			    </ul>
-
-
-
-
-
-
-
-
-
-
-	        
-	        </div>
+            </div>
 	    </div>
 	    <div class="bottom">
 	        <div class="bottom-first">
 	            <span>&copy; 2016 知乎</span>
 	        	<span class="dot">·</span>
-	        	<a target="_blank" href="/roundtable">知乎圆桌</a>
+	        	<a target="_blank" href="https://www.zhihu.com/roundtable">知乎圆桌</a>
 	        	<span class="dot">·</span>
-	        	<a target="_blank" href="/roundtable">发现</a>
+	        	<a target="_blank" href="https://www.zhihu.com/explore">发现</a>
 	        	<span class="dot">·</span>
-	        	<a target="_blank" href="/roundtable">移动应用</a>
+	        	<a target="_blank" href="https://www.zhihu.com/app/">移动应用</a>
 	        	<span class="dot">·</span>
-	        	<a target="_blank" href="/roundtable">使用机构账户登录</a>
+	        	<a target="_blank" href="https://www.zhihu.com/org/signin">使用机构账户登录</a>
 	            <span class="dot">·</span>
-	        	<a target="_blank" href="/roundtable">联系我们</a>
+	        	<a target="_blank" href="https://www.zhihu.com/contact">联系我们</a>
 	        	<span class="dot">·</span>
-	        	<a target="_blank" href="/roundtable">来知乎工作</a>
+	        	<a target="_blank" href="https://www.zhihu.com/careers">来知乎工作</a>
 	        </div>
 	        <div class="bottom-secend">
 	            <span>京 IPC 证 110745 号</span>
@@ -140,16 +117,6 @@
             input1.style.display = "none";
             input2.style.display = "block";
         }
-        
-
-
-
-
-
-
-
-
-
         function checkForm(){
         	if(!onblurName()){
         		return false;
@@ -163,10 +130,8 @@
         		return true;
         	}
         }
-        
         var te5 = $("te5");
-            te5.style.display = "none";
-       
+        te5.style.display = "none";
         function onblurName(){
         	var span = $("s_name");
         	var name = $("name");
@@ -188,8 +153,6 @@
                 return true;
         	}
         }
-        
-
         function onblurTel(){
         	var tel = $("tel");
         	var span = $("s_tel");
@@ -206,7 +169,6 @@
                 return true;
             }
         }
-    	
     	function onblurPwd(){
     		var pwd = $("pwd");
     		var span = $("s_pwd");
@@ -224,7 +186,6 @@
                 return true;
     		}
     	}
-    	
     	function onblurCheck(){
     		var check = $("check");
             var span = $("s_check");
@@ -242,16 +203,45 @@
                 return true;
             }
     	}
-
-    	function checkForm_dl(){
-
-    	}
+        function checkForm_dl(){
+    		var name2 = $("name2");
+    		var pwd2 = $("pwd2");
+            if(!onblurPwd2()){
+                return false;
+            }else if(!onblurPwd2()){
+            	return false;
+            }else if(name2.value == "18323777183" && pwd2.value == "wangjia"){
+            	return true;
+            }else{
+            	alert("你输入的账号或密码不正确!");
+            	name2.value = "";
+            	pwd2.value = "";
+            	return false;
+            }
+        }
     	function onblurName2(){
     		var name2 = $("name2");
     		var span = $("s_name2");
     		if(name2.value == ""){
     			span.className = "msg2";
     			span.innerHTML = "请输入邮箱或手机号！";
+    			return false;
+    		}else{
+    			span.style.display = "none";
+    			return true;
+    		}
+    	}
+    	function onblurPwd2(){
+    		var pwd2 = $("pwd2");
+    		var span = $("s_pwd2");
+    		if(pwd2.value == ""){
+    			span.className = "msg2";
+    			span.innerHTML = "请输入密码！";
+    		    span.style.top = "-103px";
+    			return false;
+    		}else{
+                span.style.display = "none";
+    			return true;
     		}
     	}
     </script> 

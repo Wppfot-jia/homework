@@ -28,7 +28,6 @@ body{
 .head ul li{
 	width:330px;
 	height:80px;
-	
 }
 .head ul .te1{
 	left:78px;
@@ -90,7 +89,6 @@ body{
 	font-size:100%;
 	position:relative;
 	outline:medium;
-
 }
 .te3,.te4,.te5{
 	position:relative;
@@ -182,7 +180,6 @@ body{
 	height:80px;
 	position:relative;
 	top:-94px;
-
 }
 .other-way p{
 	font-size:15PX;
@@ -201,8 +198,6 @@ body{
 	top:40px;
     left:-105px;
 }
-
-
 .msg2{
     color:#ff3333;
     background-color:#ffcc99;
@@ -266,6 +261,10 @@ body{
 .input1 .te7 a:hover{
     color:#55abed;
 }
+.download a:link{
+	color:red;
+	text-decoration:none;
+}
 .input1 .te8{
 	display:block;
 	width:330px;
@@ -277,7 +276,6 @@ body{
 	text-align:center;
 	line-height:45px;
 }
-
 .bottom-first{
 	text-align:center;
     width:1800px;
