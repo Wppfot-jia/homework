@@ -261,10 +261,7 @@ body{
 .input1 .te7 a:hover{
     color:#55abed;
 }
-.download a:link{
-	color:red;
-	text-decoration:none;
-}
+
 .input1 .te8{
 	display:block;
 	width:330px;
