@@ -20,7 +20,7 @@
                 
 
                 <ul>
-                    <a href="#"  onmouseout="omoutLi1()" onmouseover="omoverLi1()"><li id="li1" onclick="ocLi1()" >消息</li></a>
+                    <a href="#"  onmouseout="omoutLi1()" onmouseover="omoverLi1()"><li id="li1" onclick="ocLi1()">消息</li></a>
                     <a href="#" onmouseout="omoutLi2()" onmouseover="omoverLi2()"><li id="li2" onclick="ocLi2()">发现</li></a>
                     <a href="#" onmouseout="omoutLi3()" onmouseover="omoverLi3()"><li id="li3" onclick="ocLi3()">话题</li></a>
                     <a href="#" onmouseout="omoutLi4()" onmouseover="omoverLi4()"><li id="li4" onclick="ocLi4()">首页</li></a>
@@ -62,6 +62,14 @@
                     </div>
                 </div>
                 <ul>
+                    
+                    <div class="delated" id="delated">
+                        <span>此内容将不会在动态中再次显示 • 撤销</span>
+                        <img onclick="ocDelated()" src="../img/delate.png">
+                    </div>
+                    
+
+
                     <li class="massage">
                         <div class="main">
                             <div class="main-left">
@@ -70,6 +78,7 @@
                             <div class="main-right">
                                 <div class="main-first">
                                     <span>热门内容,来自: </span><span>美食</span>
+                                    <img id="de1" onclick="ocDe1()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
                                     <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>煮泡面时，如何正确地打鸡蛋？</span></a>
@@ -101,6 +110,7 @@
                             <div class="main-right">
                                 <div class="main-first">
                                     <span>热门内容,来自: </span><span>动漫</span>
+                                    <img id="de2" onclick="ocDe2()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
                                     <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>如何评价新海诚？</span></a>
@@ -132,6 +142,7 @@
                             <div class="main-right">
                                 <div class="main-first">
                                     <span>热门内容,来自: </span><span>旅行</span>
+                                    <img id="de3" onclick="ocDe3()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
                                     <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>骗术大全之意大利 | 100美元的幸运绳？这真是一个悲伤的故事</span></a>
@@ -163,6 +174,7 @@
                             <div class="main-right">
                                 <div class="main-first">
                                     <span>热门内容,来自: </span><span>摄影</span>
+                                    <img id="de4" onclick="ocDe4()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
                                     <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>2016年,你拍过的最棒的图片是那一张？</span></a>
@@ -194,6 +206,7 @@
                             <div class="main-right">
                                 <div class="main-first">
                                     <span>热门内容,来自: </span><span>汽车</span>
+                                    <img id="de5" onclick="ocDe5()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
                                     <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>开车不用慌，老司机带带你 | 新书上架📚？</span></a>
@@ -207,7 +220,7 @@
                                         <img src="../img/cars.png"> 
                                     </div>
                                     <div class="main-forth-word">
-                                        私家车的普及和增多，使得越来越多人加入考驾照大军。不管日常有没有车开，但证都得先揣在兜里。我有一个朋友，拿到了驾照但从来不开车，问他为什么，答曰「我开的车我自己都不敢坐」。还有个朋友，拿证后第一次开车跟人发生刮蹭。之后再也不开车… 
+                                        私家车的普及和增多，使得越来越多人加入考驾照大军。不管有没有车开，但证都得先揣在兜里。我有一个朋友，拿到了驾照但从来不开车，问他为什么，答曰「我开的车我自己都不敢坐」。还有个朋友，拿证后第一次开车跟人发生刮蹭。之后再也不开车… 
                                         <div class="show"><span>显示全部</span></div>
                                     </div>
                                 </div>
@@ -225,6 +238,7 @@
                             <div class="main-right">
                                 <div class="main-first">
                                     <span>热门内容,来自: </span><span>政治</span>
+                                    <img id="de6" onclick="ocDe6()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
                                     <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>如何评价 2016 年 11 月 8 日美国总统大选结果？</span></a>
@@ -248,6 +262,7 @@
                             </div>
                         </div>
                     </li>
+
                 </ul>
             </div>
             
@@ -456,9 +471,58 @@
             var li1 = $("Li4$");
             li1.style.backgroundColor = "rgb(9,95,179)";
         }
-        
-
-
+        function ocDe1(){
+            var de1 = $("de1");
+            var delated = $("delated")
+            var delate = de1.parentNode.parentNode.parentNode.parentNode;
+            var parent = delate.parentNode;
+            parent.removeChild(delate);
+            delated.style.display = "block";
+        }
+        function ocDe2(){
+            var de1 = $("de2");
+            var delated = $("delated")
+            var delate = de1.parentNode.parentNode.parentNode.parentNode;
+            var parent = delate.parentNode;
+            parent.removeChild(delate);
+            delated.style.display = "block";
+        }
+        function ocDe3(){
+            var de1 = $("de3");
+            var delated = $("delated")
+            var delate = de1.parentNode.parentNode.parentNode.parentNode;
+            var parent = delate.parentNode;
+            parent.removeChild(delate);
+            delated.style.display = "block";
+        }
+        function ocDe4(){
+            var de1 = $("de4");
+            var delated = $("delated")
+            var delate = de1.parentNode.parentNode.parentNode.parentNode;
+            var parent = delate.parentNode;
+            parent.removeChild(delate);
+            delated.style.display = "block";
+        }
+        function ocDe5(){
+            var de1 = $("de5");
+            var delated = $("delated")
+            var delate = de1.parentNode.parentNode.parentNode.parentNode;
+            var parent = delate.parentNode;
+            parent.removeChild(delate);
+            delated.style.display = "block";
+        }
+        function ocDe6(){
+            var de1 = $("de6");
+            var delated = $("delated")
+            var delate = de1.parentNode.parentNode.parentNode.parentNode;
+            var parent = delate.parentNode;
+            parent.removeChild(delate);
+            delated.style.display = "block";
+        }
+        function ocDelated(){
+            var delated = $("delated");
+            delated.style.display = "none";
+        }
     </script>
     </body>
 </html>
