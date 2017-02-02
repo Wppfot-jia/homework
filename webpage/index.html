@@ -10,13 +10,24 @@
     <body>
         <div class="nav">
             <div class="nav_contain">
-                <img src="../img/1.png">
+                <div class="search">
+                    <a href="index.html"><img class="s1" src="../img/search-zhihu.png"></a>
+                    <form method="get" action="index.html">
+                        <input id="search-input" type="text" placeholder="&nbsp;搜索你感兴趣的内容..." value="">
+                        <input id="search-search" type="image" src="../img/search-2.png">
+                    </form>
+                </div>
+                
+
                 <ul>
-                    <a href="#"><li>消息</li></a>
-                    <a href="#"><li>发现</li></a>
-                    <a href="#"><li>话题</li></a>
-                    <a href="#"><li>首页</li></a>
+                    <a href="#"  onmouseout="omoutLi1()" onmouseover="omoverLi1()"><li id="li1" onclick="ocLi1()" >消息</li></a>
+                    <a href="#" onmouseout="omoutLi2()" onmouseover="omoverLi2()"><li id="li2" onclick="ocLi2()">发现</li></a>
+                    <a href="#" onmouseout="omoutLi3()" onmouseover="omoverLi3()"><li id="li3" onclick="ocLi3()">话题</li></a>
+                    <a href="#" onmouseout="omoutLi4()" onmouseover="omoverLi4()"><li id="li4" onclick="ocLi4()">首页</li></a>
                 </ul>
+                    
+
+
                     <div class="nav_personal">
                         <img src="../img/2.png">
                     <span>王佳</span>
@@ -24,10 +35,8 @@
                 <a href="#"><div class="nav_question">提问</div></a>
             </div>
         </div>
-        
         <div class="contain">
             <div class="left">
-                
                 <div class="left_first">
                     <div class="first_top">
                         <img src="../img/2.png">
@@ -45,11 +54,8 @@
                         <span class="botton_secend">设置</span>
                     </div>
                 </div>
-                
-
                 <ul>
                     <li class="massage">
-                        
                         <div class="main">
                             <div class="main-left">
                                 <img src="../img/cate.png">
@@ -73,189 +79,171 @@
                                         吃泡面的时候，你喜欢吃十二分熟的鸡蛋，还是溏心蛋，又或是碎蛋汤？你有纠结过该什么时候打鸡蛋进去，鸡蛋熟得刚刚好又不会碎吗？看完这篇，学会N种方法花式打鸡蛋！ 面饼有一面有“坑”，你们发现了吗？泡面的面饼不是有一面是凹进去的么…
                                         <div class="show" id="show" onmouseover="onmouseoverShow()" onmouseout="onmouseoutShow()"><span>显示全部</span></div>
                                     </div>
-                                   
                                 </div>
                                 <div class="main-fifth">
                                     <span>1037条评论</span><span class="dot1">·</span><span>去往文章页</span>
                                 </div>
                             </div>
                         </div>
-                    
                     </li>
-                    
                     <li class="massage">
                         <div class="main">
                             <div class="main-left">
-                                <img src="../img/cate.png">
+                                <img src="../img/cartoon.png">
                             </div>
                             <div class="main-right">
                                 <div class="main-first">
-                                    <span>热门内容,来自: </span><span>美食</span>
+                                    <span>热门内容,来自: </span><span>动漫</span>
                                 </div>
                                 <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>煮泡面时，如何正确地打鸡蛋？</span></a>
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>如何评价新海诚？</span></a>
                                 </div>
                                 <div class="main-third">
-                                    <span class="main-third-left">下厨房, </span>
-                                    <span class="main-third-right">唯有美食与爱不可辜负</span>
+                                    <span class="main-third-left">lens, </span>
+                                    <span class="main-third-right">&quot;即使是一道最微弱的光,我们也要把它洒...&quot;</span>
                                 </div>
                                 <div class="main-forth">
                                     <div class="main-forth-img">
-                                        <img src="../img/noodle.png"> 
+                                        <img src="../img/xinhaicheng.png"> 
                                     </div>
                                     <div class="main-forth-word">
-                                        吃泡面的时候，你喜欢吃十二分熟的鸡蛋，还是溏心蛋，又或是碎蛋汤？你有纠结过该什么时候打鸡蛋进去，鸡蛋熟得刚刚好又不会碎吗？看完这篇，学会N种方法花式打鸡蛋！ 面饼有一面有“坑”，你们发现了吗？泡面的面饼不是有一面是凹进去的么…
+                                        《你的名字》在上映仅28天，票房即超过百亿日元。这是日本百亿级动画电影中，唯一一部非吉卜力工作室制作的影片。截至11月28日，该片已经超过宫崎骏的《幽灵公主》，成为动画影史上票房第三的作品。 导演——新海诚也一下子被推到了聚光灯之… 
                                         <div class="show"><span>显示全部</span></div>
                                     </div>
                                 </div>
                                 <div class="main-fifth">
-                                    <span>1037条评论</span><span class="dot1">·</span><span>去往文章页</span>
+                                    <span>460条评论</span><span class="dot1">·</span><span>去往文章页</span>
                                 </div>
                             </div>
                         </div>
                     </li>
-
                     <li class="massage">
                         <div class="main">
                             <div class="main-left">
-                                <img src="../img/cate.png">
+                                <img src="../img/tour.png">
                             </div>
                             <div class="main-right">
                                 <div class="main-first">
-                                    <span>热门内容,来自: </span><span>美食</span>
+                                    <span>热门内容,来自: </span><span>旅行</span>
                                 </div>
                                 <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>煮泡面时，如何正确地打鸡蛋？</span></a>
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>骗术大全之意大利 | 100美元的幸运绳？这真是一个悲伤的故事</span></a>
                                 </div>
                                 <div class="main-third">
-                                    <span class="main-third-left">下厨房, </span>
-                                    <span class="main-third-right">唯有美食与爱不可辜负</span>
+                                    <span class="main-third-left">穷游锦囊, </span>
+                                    <span class="main-third-right">有用,有趣,能救命</span>
                                 </div>
                                 <div class="main-forth">
                                     <div class="main-forth-img">
-                                        <img src="../img/noodle.png"> 
+                                        <img src="../img/police.png"> 
                                     </div>
                                     <div class="main-forth-word">
-                                        吃泡面的时候，你喜欢吃十二分熟的鸡蛋，还是溏心蛋，又或是碎蛋汤？你有纠结过该什么时候打鸡蛋进去，鸡蛋熟得刚刚好又不会碎吗？看完这篇，学会N种方法花式打鸡蛋！ 面饼有一面有“坑”，你们发现了吗？泡面的面饼不是有一面是凹进去的么…
+                                        和平年代也有激荡的风云！ 请时刻铭记：在冰冷的钢枪和火热的胸膛背后，我们才会有“指点江山、激扬文字、粪土当年万户侯”的豪气和底气！ 《当那一天来临》是2017年晚会上我最喜欢的歌曲，因此查询了一下相关背景。这是一首十多年前老歌，原唱是…
                                         <div class="show"><span>显示全部</span></div>
                                     </div>
                                 </div>
                                 <div class="main-fifth">
-                                    <span>1037条评论</span><span class="dot1">·</span><span>去往文章页</span>
+                                    <span>344条评论</span><span class="dot1">·</span><span>去往文章页</span>
                                 </div>
                             </div>
                         </div>
                     </li>
-
                     <li class="massage">
                         <div class="main">
                             <div class="main-left">
-                                <img src="../img/cate.png">
+                                <img src="../img/picture.png">
                             </div>
                             <div class="main-right">
                                 <div class="main-first">
-                                    <span>热门内容,来自: </span><span>美食</span>
+                                    <span>热门内容,来自: </span><span>摄影</span>
                                 </div>
                                 <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>煮泡面时，如何正确地打鸡蛋？</span></a>
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>2016年,你拍过的最棒的图片是那一张？</span></a>
                                 </div>
                                 <div class="main-third">
-                                    <span class="main-third-left">下厨房, </span>
-                                    <span class="main-third-right">唯有美食与爱不可辜负</span>
+                                    <span class="main-third-left">ENJOY精选美食电商, </span>
+                                    <span class="main-third-right">ENJOY精选美食电商</span>
                                 </div>
                                 <div class="main-forth">
                                     <div class="main-forth-img">
-                                        <img src="../img/noodle.png"> 
+                                        <img src="../img/photo.png"> 
                                     </div>
                                     <div class="main-forth-word">
-                                        吃泡面的时候，你喜欢吃十二分熟的鸡蛋，还是溏心蛋，又或是碎蛋汤？你有纠结过该什么时候打鸡蛋进去，鸡蛋熟得刚刚好又不会碎吗？看完这篇，学会N种方法花式打鸡蛋！ 面饼有一面有“坑”，你们发现了吗？泡面的面饼不是有一面是凹进去的么…
+                                        我们很难给出一个评价就是我们拍出来的这些照片哪个是最好的，都那么棒，或许大家可以选出一张来： 囿于科技限制，还无法将美食的色、香、味、形、境全然地摆在你的面前。可是，他们独具慧眼，懂得用镜头与食物对话，捕捉美味的灵魂。他们的…
                                         <div class="show"><span>显示全部</span></div>
                                     </div>
                                 </div>
                                 <div class="main-fifth">
-                                    <span>1037条评论</span><span class="dot1">·</span><span>去往文章页</span>
+                                    <span>65条评论</span><span class="dot1">·</span><span>去往文章页</span>
                                 </div>
                             </div>
                         </div>
                     </li>
-
                     <li class="massage">
                         <div class="main">
                             <div class="main-left">
-                                <img src="../img/cate.png">
+                                <img src="../img/car.png">
                             </div>
                             <div class="main-right">
                                 <div class="main-first">
-                                    <span>热门内容,来自: </span><span>美食</span>
+                                    <span>热门内容,来自: </span><span>汽车</span>
                                 </div>
                                 <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>煮泡面时，如何正确地打鸡蛋？</span></a>
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>开车不用慌，老司机带带你 | 新书上架📚？</span></a>
                                 </div>
                                 <div class="main-third">
-                                    <span class="main-third-left">下厨房, </span>
-                                    <span class="main-third-right">唯有美食与爱不可辜负</span>
+                                    <span class="main-third-left">知乎电子书, </span>
+                                    <span class="main-third-right">你很忙,但知识不慌张。</span>
                                 </div>
                                 <div class="main-forth">
                                     <div class="main-forth-img">
-                                        <img src="../img/noodle.png"> 
+                                        <img src="../img/cars.png"> 
                                     </div>
                                     <div class="main-forth-word">
-                                        吃泡面的时候，你喜欢吃十二分熟的鸡蛋，还是溏心蛋，又或是碎蛋汤？你有纠结过该什么时候打鸡蛋进去，鸡蛋熟得刚刚好又不会碎吗？看完这篇，学会N种方法花式打鸡蛋！ 面饼有一面有“坑”，你们发现了吗？泡面的面饼不是有一面是凹进去的么…
+                                        私家车的普及和增多，使得越来越多人加入考驾照大军。不管日常有没有车开，但证都得先揣在兜里。我有一个朋友，拿到了驾照但从来不开车，问他为什么，答曰「我开的车我自己都不敢坐」。还有个朋友，拿证后第一次开车跟人发生刮蹭。之后再也不开车… 
                                         <div class="show"><span>显示全部</span></div>
                                     </div>
                                 </div>
                                 <div class="main-fifth">
-                                    <span>1037条评论</span><span class="dot1">·</span><span>去往文章页</span>
+                                    <span>3280条评论</span><span class="dot1">·</span><span>去往文章页</span>
                                 </div>
                             </div>
                         </div>
                     </li>
-
                     <li class="massage">
                         <div class="main">
                             <div class="main-left">
-                                <img src="../img/cate.png">
+                                <img src="../img/zhengzhi.png">
                             </div>
                             <div class="main-right">
                                 <div class="main-first">
-                                    <span>热门内容,来自: </span><span>美食</span>
+                                    <span>热门内容,来自: </span><span>政治</span>
                                 </div>
                                 <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>煮泡面时，如何正确地打鸡蛋？</span></a>
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>如何评价 2016 年 11 月 8 日美国总统大选结果？</span></a>
                                 </div>
                                 <div class="main-third">
-                                    <span class="main-third-left">下厨房, </span>
-                                    <span class="main-third-right">唯有美食与爱不可辜负</span>
+                                    <span class="main-third-left">iWeekly周末画报, </span>
+                                    <span class="main-third-right">全球视角</span>
                                 </div>
                                 <div class="main-forth">
                                     <div class="main-forth-img">
-                                        <img src="../img/noodle.png"> 
+                                        <img src="../img/human.png"> 
                                     </div>
                                     <div class="main-forth-word">
-                                        吃泡面的时候，你喜欢吃十二分熟的鸡蛋，还是溏心蛋，又或是碎蛋汤？你有纠结过该什么时候打鸡蛋进去，鸡蛋熟得刚刚好又不会碎吗？看完这篇，学会N种方法花式打鸡蛋！ 面饼有一面有“坑”，你们发现了吗？泡面的面饼不是有一面是凹进去的么…
+                                        支持维塔斯维权，对芒果台的营销方式感到恶心。 这么大的电视台，却在未经原歌手同意要求迪玛希换歌，但在被起诉后，微博的热搜却是维塔斯起诉迪玛希侵权，企图用这转移大家注意力且再度营销节目，整个做法简直称得上是恶劣。首先，稍微关…
                                         <div class="show"><span>显示全部</span></div>
                                     </div>
                                 </div>
                                 <div class="main-fifth">
-                                    <span>1037条评论</span><span class="dot1">·</span><span>去往文章页</span>
+                                    <span>100条评论</span><span class="dot1">·</span><span>去往文章页</span>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    
-
-                   
                 </ul>
-                
             </div>
             
-
-
-
-
-
-
-
             <div class="right">
                 <div class="right_first">
                     <ul>
@@ -265,7 +253,6 @@
                     </ul>
                 </div>
                 
-
                 <div class="right_first">
                     <ul>
                         <li>公共编辑动态</li>
@@ -331,11 +318,6 @@
                 <a target="_blank" href="#">&copy;2017 知乎</a>
                 </div>
             </div>
-            
-
-
-
-
         </div>
     <script type="text/javascript">
         function $(id){
@@ -349,7 +331,80 @@
             var show = $("show");
             show.style.backgroundColor = "rgb(256,256,256)";
         }
+        function omoverLi1(){
+            var li1 = $("li1");
+            li1.style.color = "rgb(256,256,256)";
+        }
+        function omoutLi1(){
+            var li1 = $("li1");
+            li1.style.color = "rgb(220,220,220)";
+        }
+        function omoverLi2(){
+            var li1 = $("li2");
+            li1.style.color = "rgb(256,256,256)";
+        }
+        function omoutLi2(){
+            var li1 = $("li2");
+            li1.style.color = "rgb(220,220,220)";
+        }
+        function omoverLi3(){
+            var li1 = $("li3");
+            li1.style.color = "rgb(256,256,256)";
+        }
+        function omoutLi3(){
+            var li1 = $("li3");
+            li1.style.color = "rgb(220,220,220)";
+        }
+        function omoverLi4(){
+            var li1 = $("li4");
+            li1.style.color = "rgb(256,256,256)";
+        }
+        function omoutLi4(){
+            var li1 = $("li4");
+            li1.style.color = "rgb(220,220,220)";
+        }
+        
+
+        function ocLi1(){
+            var li1 = $("li1");
+            var li2 = $("li2");
+            var li3 = $("li3");
+            var li4 = $("li4");
+            li1.style.backgroundColor = "rgb(8,95,180)";
+            li2.style.backgroundColor = "rgb(8,109,211)";
+            li3.style.backgroundColor = "rgb(8,109,211)";
+            li4.style.backgroundColor = "rgb(8,109,211)";
+        }
+        function ocLi2(){
+            var li1 = $("li1");
+            var li2 = $("li2");
+            var li3 = $("li3");
+            var li4 = $("li4");
+            li1.style.backgroundColor = "rgb(8,109,211)";
+            li2.style.backgroundColor = "rgb(8,95,180)";
+            li3.style.backgroundColor = "rgb(8,109,211)";
+            li4.style.backgroundColor = "rgb(8,109,211)";
+        }
+        function ocLi3(){
+            var li1 = $("li1");
+            var li2 = $("li2");
+            var li3 = $("li3");
+            var li4 = $("li4");
+            li1.style.backgroundColor = "rgb(8,109,211)";
+            li2.style.backgroundColor = "rgb(8,109,211)";
+            li3.style.backgroundColor = "rgb(8,95,180)";
+            li4.style.backgroundColor = "rgb(8,109,211)";
+        }
+        function ocLi4(){
+            var li1 = $("li1");
+            var li2 = $("li2");
+            var li3 = $("li3");
+            var li4 = $("li4");
+            li1.style.backgroundColor = "rgb(8,109,211)";
+            li2.style.backgroundColor = "rgb(8,109,211)";
+            li3.style.backgroundColor = "rgb(8,109,211)";
+            li4.style.backgroundColor = "rgb(8,95,180)";
+        }
     </script>
-    
     </body>
 </html>
