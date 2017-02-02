@@ -28,10 +28,17 @@
                     
 
 
-                    <div class="nav_personal">
-                        <img src="../img/2.png">
+                <div class="nav_personal" id="nav_personal" onmouseover="omoverNavp()" onmouseout="omoutNavp()">
+                    <img src="../img/2.png">
                     <span>王佳</span>
+                    <ul id="ul">
+                        <li id="Li1$" onmouseout="omoutLi1$()" onmouseover="omoverLi1$()">我的主页</li>
+                        <li id="Li2$" onmouseout="omoutLi2$()" onmouseover="omoverLi2$()">私信</li>
+                        <li id="Li3$" onmouseout="omoutLi3$()" onmouseover="omoverLi3$()">设置</li>
+                        <li id="Li4$" onmouseout="omoutLi4$()" onmouseover="omoverLi4$()">退出</li>
+                    </ul>
                 </div>
+                
                 <a href="#"><div class="nav_question">提问</div></a>
             </div>
         </div>
@@ -405,6 +412,53 @@
             li3.style.backgroundColor = "rgb(8,109,211)";
             li4.style.backgroundColor = "rgb(8,95,180)";
         }
+        function omoverNavp(){
+            var nav_personal = $("nav_personal");
+            var ul = $("ul");
+            nav_personal.style.backgroundColor = "rgb(9,95,179)";
+            ul.style.display = "block";
+        }
+        function omoutNavp(){
+            var nav_personal = $("nav_personal");
+            var ul = $("ul");
+            nav_personal.style.backgroundColor = "rgb(8,109,211)";
+            ul.style.display = "none";
+        }
+        function omoverLi1$(){
+            var li1 = $("Li1$");
+            li1.style.backgroundColor = "rgb(2,103,204)";
+        }
+        function omoutLi1$(){
+            var li1 = $("Li1$");
+            li1.style.backgroundColor = "rgb(9,95,179)";
+        }
+        function omoverLi2$(){
+            var li1 = $("Li2$");
+            li1.style.backgroundColor = "rgb(2,103,204)";
+        }
+        function omoutLi2$(){
+            var li1 = $("Li2$");
+            li1.style.backgroundColor = "rgb(9,95,179)";
+        }
+        function omoverLi3$(){
+            var li1 = $("Li3$");
+            li1.style.backgroundColor = "rgb(2,103,204)";
+        }
+        function omoutLi3$(){
+            var li1 = $("Li3$");
+            li1.style.backgroundColor = "rgb(9,95,179)";
+        }
+        function omoverLi4$(){
+            var li1 = $("Li4$");
+            li1.style.backgroundColor = "rgb(2,103,204)";
+        }
+        function omoutLi4$(){
+            var li1 = $("Li4$");
+            li1.style.backgroundColor = "rgb(9,95,179)";
+        }
+        
+
+
     </script>
     </body>
 </html>
