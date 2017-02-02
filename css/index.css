@@ -186,7 +186,12 @@
 	color:rgb(34,85,153);
 	font-size:20px;
 	font-weight:bold;
-
+}
+.main-secend a:link{
+	text-decoration:none;
+}
+.main-secend a:hover{
+	text-decoration:underline;
 }
 .main-third{
 	width:740px;
@@ -204,6 +209,14 @@
 .main-forth{
 	width:740px;
 	height:126px;
+}
+.show{
+	position:relative;
+	top:-29px;
+	left:340px;
+	width:73px;
+	height:22px;
+	color:rgb(34,85,153);
 
 }
 .main-forth img{
@@ -238,8 +251,6 @@
 .dot1{
 	margin:0 3px;
 }
-
-
 
 .right{
 	width:345px;
