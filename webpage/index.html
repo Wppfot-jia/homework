@@ -18,7 +18,6 @@
                     </form>
                 </div>
                 
-
                 <ul>
                     <a href="#"  onmouseout="omoutLi1()" onmouseover="omoverLi1()"><li id="li1" onclick="ocLi1()">消息</li></a>
                     <a href="#" onmouseout="omoutLi2()" onmouseover="omoverLi2()"><li id="li2" onclick="ocLi2()">发现</li></a>
@@ -26,8 +25,6 @@
                     <a href="#" onmouseout="omoutLi4()" onmouseover="omoverLi4()"><li id="li4" onclick="ocLi4()">首页</li></a>
                 </ul>
                     
-
-
                 <div class="nav_personal" id="nav_personal" onmouseover="omoverNavp()" onmouseout="omoutNavp()">
                     <img src="../img/2.png">
                     <span>王佳</span>
@@ -68,12 +65,12 @@
                         <img onclick="ocDelated()" src="../img/delate.png">
                     </div>
                     
-                    
-
-                    
                     <div class="open" id="open_$">
                         <div class="open-left">
                             <img src="../img/cate.png">
+                            <div class="good" id="good_te" onclick="ocGood_te()" onmouseover="omoverGood_te()" onmouseout="omoutGood_te()">322</div>
+                            <div class="good" id="bad" onclick="ocBad_te()" onmouseover="omoverBad_te()" onmouseout="omoutBad_te()">-1</div>
+                            <div class="shouqi" onclick="ocShouqi()">收起</div>
                         </div>
                         <div class="open-right">
                             <div class="open-first">
@@ -88,7 +85,7 @@
                                 <span class="open-third-right">唯有美食与爱不可辜负</span>
                             </div>
                             <div class="open-forth">
-                                <span>2304</span><span>人赞</span>
+                                <span id="new_te">322</span><span>人赞</span>
                             </div>
                             <div class="open-fifth">
                                 <p>吃泡面的时候，你喜欢吃十二分熟的鸡蛋，还是溏心蛋，又或是碎蛋汤？你有纠结过该什么时候打鸡蛋进去，鸡蛋熟得刚刚好又不会碎吗？看完这篇，学会N种方法花式打鸡蛋！ 面饼有一面有“坑”，你们发现了吗？泡面的面饼不是有一面是凹进去的么…</p>
@@ -158,33 +155,12 @@
                         </div>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <li class="massage" id="mass">
                         <div class="main">
                             <div class="main-left">
                                 <img src="../img/cate.png">
+                                <div class="good" id="good1" onclick="ocGood1()" onmouseover="omoverGood1()"
+                                onmouseout="omoutGood1()">322</div>
                             </div>
                             <div class="main-right">
                                 <div class="main-first">
@@ -217,6 +193,8 @@
                         <div class="main">
                             <div class="main-left">
                                 <img src="../img/cartoon.png">
+                                <div class="good" id="good2" onmouseover="omoverGood2()"
+                                onmouseout="omoutGood2()" onclick="ocGood2()">1034</div>
                             </div>
                             <div class="main-right">
                                 <div class="main-first">
@@ -249,6 +227,8 @@
                         <div class="main">
                             <div class="main-left">
                                 <img src="../img/tour.png">
+                                <div class="good" id="good3" onmouseover="omoverGood3()"
+                                onmouseout="omoutGood3()" onclick="ocGood3()">924</div>
                             </div>
                             <div class="main-right">
                                 <div class="main-first">
@@ -281,6 +261,8 @@
                         <div class="main">
                             <div class="main-left">
                                 <img src="../img/picture.png">
+                                <div class="good" id="good4" onmouseover="omoverGood4()"
+                                onmouseout="omoutGood4()" onclick="ocGood4()">3851</div>
                             </div>
                             <div class="main-right">
                                 <div class="main-first">
@@ -313,6 +295,8 @@
                         <div class="main">
                             <div class="main-left">
                                 <img src="../img/car.png">
+                                <div class="good" id="good5" onmouseover="omoverGood5()"
+                                onmouseout="omoutGood5()" onclick="ocGood5()">1719</div>
                             </div>
                             <div class="main-right">
                                 <div class="main-first">
@@ -345,6 +329,8 @@
                         <div class="main">
                             <div class="main-left">
                                 <img src="../img/zhengzhi.png">
+                                <div class="good" id="good6" onmouseover="omoverGood6()"
+                                onmouseout="omoutGood6()" onclick="ocGood6()">624</div>
                             </div>
                             <div class="main-right">
                                 <div class="main-first">
@@ -654,6 +640,138 @@
             var open = $("open_$");
             var mass = $("mass");
             open.style.display = "none";
+            mass.style.display = "block";
+        }
+        function omoverGood1(){
+            var good = $("good1");
+            good.style.backgroundColor = "rgb(105,142,191)";
+            good.style.color = "rgb(255,255,255)";
+        }
+        function omoutGood1(){
+            var good = $("good1");
+            good.style.backgroundColor = "rgb(239,246,250)";
+            good.style.color = "rgb(105,142,191)";
+        }
+        function omoverGood2(){
+            var good = $("good2");
+            good.style.backgroundColor = "rgb(105,142,191)";
+            good.style.color = "rgb(255,255,255)";
+        }
+        function omoutGood2(){
+            var good = $("good2");
+            good.style.backgroundColor = "rgb(239,246,250)";
+            good.style.color = "rgb(105,142,191)";
+        }
+        function omoverGood3(){
+            var good = $("good3");
+            good.style.backgroundColor = "rgb(105,142,191)";
+            good.style.color = "rgb(255,255,255)";
+        }
+        function omoutGood3(){
+            var good = $("good3");
+            good.style.backgroundColor = "rgb(239,246,250)";
+            good.style.color = "rgb(105,142,191)";
+        }
+        function omoverGood4(){
+            var good = $("good4");
+            good.style.backgroundColor = "rgb(105,142,191)";
+            good.style.color = "rgb(255,255,255)";
+        }
+        function omoutGood4(){
+            var good = $("good4");
+            good.style.backgroundColor = "rgb(239,246,250)";
+            good.style.color = "rgb(105,142,191)";
+        }
+        function omoverGood5(){
+            var good = $("good5");
+            good.style.backgroundColor = "rgb(105,142,191)";
+            good.style.color = "rgb(255,255,255)";
+        }
+        function omoutGood5(){
+            var good = $("good5");
+            good.style.backgroundColor = "rgb(239,246,250)";
+            good.style.color = "rgb(105,142,191)";
+        }
+        function omoverGood6(){
+            var good = $("good6");
+            good.style.backgroundColor = "rgb(105,142,191)";
+            good.style.color = "rgb(255,255,255)";
+        }
+        function omoutGood6(){
+            var good = $("good6");
+            good.style.backgroundColor = "rgb(239,246,250)";
+            good.style.color = "rgb(105,142,191)";
+        }
+        function omoverGood_te(){
+            var good = $("good_te");
+            good.style.backgroundColor = "rgb(105,142,191)";
+            good.style.color = "rgb(255,255,255)";
+        }
+        function omoutGood_te(){
+            var good = $("good_te");
+            good.style.backgroundColor = "rgb(239,246,250)";
+            good.style.color = "rgb(105,142,191)";
+        }
+        function ocGood_te(){
+            var good = $("good_te");
+            var new_te = $("new_te");
+            var kk = good.innerHTML;
+            good.innerHTML = ++kk;
+            new_te.innerHTML = good.innerHTML;
+        }
+        function omoverBad_te(){
+            var bad = $("bad");
+            bad.style.backgroundColor = "rgb(105,142,191)";
+            bad.style.color = "rgb(255,255,255)";
+        }
+        function omoutBad_te(){
+            var bad = $("bad");
+            bad.style.backgroundColor = "rgb(239,246,250)";
+            bad.style.color = "rgb(105,142,191)";
+        }
+        function ocBad_te(){
+            var good = $("bad_te");
+            var new_te = $("new_te");
+            var kk = new_te.innerHTML;
+            kk = --new_te.innerHTML;
+            new_te.innerHTML = kk;
+        }
+        
+
+        function ocGood1(){
+            var good = $("good1");
+            var kk = good.innerHTML;
+            good.innerHTML = ++kk;
+        }
+        function ocGood2(){
+            var good = $("good2");
+            var kk = good.innerHTML;
+            good.innerHTML = ++kk;
+        }
+        function ocGood3(){
+            var good = $("good3");
+            var kk = good.innerHTML;
+            good.innerHTML = ++kk;
+        }
+        function ocGood4(){
+            var good = $("good4");
+            var kk = good.innerHTML;
+            good.innerHTML = ++kk;
+        }
+        function ocGood5(){
+            var good = $("good5");
+            var kk = good.innerHTML;
+            good.innerHTML = ++kk;
+        }
+        function ocGood6(){
+            var good = $("good6");
+            var kk = good.innerHTML;
+            good.innerHTML = ++kk;
+        }
+        function ocShouqi(){
+            var open_$ = $("open_$");
+            var mass = $("mass");
+            open_$.style.display = "none";
             mass.style.display = "block";
         }
     </script>
