@@ -189,7 +189,7 @@
                             <div class="main-right">
                                 <div class="main-first">
                                     <span>热门内容,来自: </span><span>美食</span>
-                                    <img id="de1" onclick="ocDe1()" src="../img/delate.png">
+                                    <img id="de1-m" onclick="ocDe1_m()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
                                     <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>煮泡面时，如何正确地打鸡蛋？</span></a>
@@ -584,6 +584,14 @@
         }
         function ocDe1(){
             var de1 = $("de1");
+            var delated = $("delated")
+            var delate = de1.parentNode.parentNode.parentNode;
+            var parent = delate.parentNode;
+            parent.removeChild(delate);
+            delated.style.display = "block";
+        }
+        function ocDe1_m(){
+            var de1 = $("de1-m");
             var delated = $("delated")
             var delate = de1.parentNode.parentNode.parentNode.parentNode;
             var parent = delate.parentNode;
