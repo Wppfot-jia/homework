@@ -730,11 +730,13 @@
             bad.style.color = "rgb(105,142,191)";
         }
         function ocBad_te(){
+            var good2 = $("good_te");
             var good = $("bad_te");
             var new_te = $("new_te");
             var kk = new_te.innerHTML;
             kk = --new_te.innerHTML;
             new_te.innerHTML = kk;
+            good2.innerHTML = kk;
         }
         
 

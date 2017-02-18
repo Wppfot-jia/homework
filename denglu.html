@@ -14,10 +14,10 @@
 	            	<li class="te2">与世界分享你的知识、经验和见解</li>
 	            </ul>
 	            <ul class="xuanzhe">
-	            	<li><a href="#signup" onclick="zhuche()" class="zhuche">注册</a></li>
-	            	<li><a href="#signin" onclick="denglu()" class="denglu">登录</a></li>
-	            	<span class="na1"></span>
-	            	<span class="na2"></span>
+	            	<li><a href="#signup" onclick="zhuche()" class="zhuche"><span id="xz_zc">注册</span></a></li>
+	            	<li><a href="#signin" onclick="denglu()" class="denglu"><span  id="xz_dl">登录</span></a></li>
+	            	<span id="na1" class="na1"></span>
+	            	
 	            </ul>
 	            <ul class="input1" id="input1">
 	            	<form action="./webpage/success.html" method="post" onsubmit="return checkForm()"> 
@@ -108,12 +108,24 @@
         function zhuche(){
             var input1 = $("input1");
             var input2 = $("input2");
+            var na1 = $("na1");
+            var xz_zc = $("xz_zc");
+            var xz_dl = $("xz_dl");
             input1.style.display = "block";
             input2.style.display = "none";
+            xz_zc.style.color = "rgb(17,137,235)";
+            xz_dl.style.color = "rgb(153,154,155)";
+            na1.className = "na1";
         }
         function denglu(){
             var input1 = $("input1");
             var input2 = $("input2");
+            var na1 = $("na1");
+            var xz_dl = $("xz_dl");
+            var xz_zc = $("xz_zc");
+            na1.className = "na2";
+            xz_dl.style.color = "rgb(17,137,235)";
+            xz_zc.style.color = "rgb(153,154,155)";
             input1.style.display = "none";
             input2.style.display = "block";
         }
