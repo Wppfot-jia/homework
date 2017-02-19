@@ -121,6 +121,9 @@ body{
 	color:rgb(15,136,235);
 	margin:9px 0 0 30px;
 }
+.onclick-show-message a:link{
+	text-decoration:none;
+}
 .show-message img{
 	float:left;
 	border:5px solid white;
