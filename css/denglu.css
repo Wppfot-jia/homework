@@ -11,6 +11,7 @@ body{
 	width:1800px;
 	height:700px;
 	margin:0 auto;
+
 }
 .contain-1{
 	width:330px;
@@ -279,11 +280,11 @@ body{
 	text-align:center;
 	line-height:45px;
 }
-.bottom-first{
+/*.bottom-first{
 	text-align:center;
     width:1800px;
 	height:20px;
-	position:absolute;
+	position:relative;
 	left:50%;
 	margin-left:-900px;
 	bottom:25px;
@@ -291,20 +292,39 @@ body{
 .bottom{
 	color:#b2c1cc;
 	font-size:small;
-}
+}*/
 .bottom a:link{
 	color:#b2c1cc;
 	text-decoration:none;
 }
-.bottom-secend{
+/*.bottom-secend{
     text-align:center;
     width:1800px;
 	height:20px;
-	position:absolute;
+	position:relative;
 	left:50%;
 	margin-left:-900px;
 	bottom:5px;
-}
+}*/
 .dot{
 	margin:0 3px;
+}
+
+
+.contain{
+	height:920px;
+
+	position:relative;
+}
+.bottom-first,.bottom-secend{
+	position:absolute;
+	left:50%;
+	transform:translate(-50%,0);
+	
+} 
+.bottom-first{
+	bottom:25px;
+}
+.bottom-secend{
+	bottom:5px
 }
