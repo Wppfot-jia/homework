@@ -312,7 +312,8 @@ body{
 
 
 .contain{
-	height:920px;
+	height:740px;
+	width:1300px;
 
 	position:relative;
 }
