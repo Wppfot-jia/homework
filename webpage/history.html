@@ -4,9 +4,7 @@
         <meta charset="utf-8">
         <title></title>
         <link href="../css/history.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript">
-        </script>
-    </head>
+        </head>
     <body>
         <div class="nav">
             <div class="nav-middle">
@@ -49,7 +47,7 @@
                                 <div class="cont-right">重邮</div>
                             </li>
                             <li>
-                                <div class="cont-left">女</div>
+                                <div class="cont-left">男</div>
                                 <div class="cont-right"></div>
                             </li>
                             <li>
@@ -70,33 +68,39 @@
             <div class="bottom">
                 <div class="bottom-left">
                     <div class="bottom-left-top">
-                        <ul class="bottom-left-first">
-                            <li>动态</li>
-                            <li>回答0</li>
-                            <li>分享1</li>
-                            <li>提问0</li>
-                            <li>收藏0</li>
-                            <li>关注</li>
+                        <ul class="bottom-left-first" id="change">
+                            <li value="1" onclick="change(this)">动态</li>
+                            <li value="2" onclick="change(this)">回答0</li>
+                            <li value="3" onclick="change(this)">分享1</li>
+                            <li value="4" onclick="change(this)">提问0</li>
+                            <li value="5" onclick="change(this)">收藏0</li>
+                            <li value="6" onclick="change(this)">关注</li>
                         </ul>
                     </div>
                     
-                    <div class="bottom-left-top-dongtai">
+                    <div id="dongtai" class="bottom-left-top-dongtai">
                         <div class="bottom-left-top">
                             <ul class="bottom-left-secend">
                                 <li>我的动态</li>
                             </ul>
                         </div>
+                        <div class="bottom-image">
+                            <img src="../img/fenxiang.png">    
+                        </div>
                     </div>
 
-                    <div class="bottom-left-top-huida">
+                    <div id="huida" class="bottom-left-top-huida">
                         <div class="bottom-left-top">
                             <ul class="bottom-left-secend">
                                 <li>我的回答</li>
                             </ul>
                         </div>
+                        <div class="bottom-image">
+                            <img src="../img/huida.png">   
+                        </div>
                     </div>
 
-                    <div class="bottom-left-top-fenxiang">
+                    <div id="fenxiang" class="bottom-left-top-fenxiang">
                         <div class="bottom-left-top">
                             <ul class="bottom-left-secend">
                                 <li>我的分享</li>
@@ -104,31 +108,43 @@
                                 <li>我的专栏</li>
                             </ul>
                         </div>
+                        <div class="bottom-image">
+                            <img src="../img/fenxiang.png">        
+                        </div>
                     </div>
 
-                    <div class="bottom-left-top-tiwen">
+                    <div id="tiwen" class="bottom-left-top-tiwen">
                         <div class="bottom-left-top">
                             <ul class="bottom-left-secend">
                                 <li>我的提问</li>
                             </ul>
                         </div>
+                        <div class="bottom-image">
+                            <img src="../img/tiwen.png">
+                        </div>
                     </div>
 
-                    <div class="bottom-left-top-shoucang">
+                    <div id="shoucang" class="bottom-left-top-shoucang">
                         <div class="bottom-left-top">
                             <ul class="bottom-left-secend">
                                 <li>我的收藏夹</li>
                             </ul>
                         </div>
+                        <div class="bottom-image">
+                             <img src="../img/shoucang.png">   
+                        </div>
                     </div>
 
-                    <div class="bottom-left-top-guanzhu">
+                    <div id="guanzhu" class="bottom-left-top-guanzhu">
                         <div class="bottom-left-top">
                             <ul class="bottom-left-secend">
                                 <li>我关注的人</li>
                                 <li>关注我的人</li>
                                 <li>我关注的动态</li>
                             </ul>
+                        </div>
+                        <div class="bottom-image">
+                            <img src="../img/guanzhu.png">    
                         </div>
                     </div>
                     
@@ -166,16 +182,65 @@
                         
                     </div>
                 </div>
-
-
-
-
-
-
-
-
             </div>
             
         </div>
+    <script type="text/javascript">
+        function change(yy){
+            var dongtai = document.getElementById("dongtai");
+            var huida = document.getElementById("huida");
+            var fenxiang = document.getElementById("fenxiang");
+            var tiwen = document.getElementById("tiwen");
+            var shoucang = document.getElementById("shoucang");
+            var guanzhu = document.getElementById("guanzhu");
+            var num = yy.value;
+            for(var i = 1;i <= yy.value.length;i++){
+                alert(yy.value);
+            }
+            if(num == 1){
+                dongtai.style.display = "block";
+                huida.style.display = "none";
+                fenxiang.style.display = "none";
+                tiwen.style.display = "none";
+                shoucang.style.display = "none";
+                guanzhu.style.display="none";
+            }else if(num == 2){
+                dongtai.style.display = "none";
+                huida.style.display = "block";
+                fenxiang.style.display = "none";
+                tiwen.style.display = "none";
+                shoucang.style.display = "none";
+                guanzhu.style.display="none";
+            }else if(num == 3){
+                dongtai.style.display = "none";
+                huida.style.display = "none";
+                fenxiang.style.display = "block";
+                tiwen.style.display = "none";
+                shoucang.style.display = "none";
+                guanzhu.style.display="none";
+            }else if(num == 4){
+                dongtai.style.display = "none";
+                huida.style.display = "none";
+                fenxiang.style.display = "none";
+                tiwen.style.display = "block";
+                shoucang.style.display = "none";
+                guanzhu.style.display="none";
+            }else if(num == 5){
+                dongtai.style.display = "none";
+                huida.style.display = "none";
+                fenxiang.style.display = "none";
+                tiwen.style.display = "none";
+                shoucang.style.display = "block";
+                guanzhu.style.display="none";
+            }else{
+                dongtai.style.display = "none";
+                huida.style.display = "none";
+                fenxiang.style.display = "none";
+                tiwen.style.display = "none";
+                shoucang.style.display = "none";
+                guanzhu.style.display="block";
+            }
+        }
+    </script>
     </body>
 </html>
