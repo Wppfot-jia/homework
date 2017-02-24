@@ -14,7 +14,7 @@
                     <li>发现</li>
                     <li>话题</li>
                 </ul>
-                <input type="text" placeholder="搜索你感兴趣的内容...">
+                <input type="text" placeholder="搜索你感兴趣的内容..." :-moz-placeholder{color:#fff;}>
                 <a href="#"><div class="nav_question">提问</div></a>
                 <ul class="nav-secend">
                     <li><img src="../img/bear.png"></li>
@@ -69,12 +69,13 @@
                 <div class="bottom-left">
                     <div class="bottom-left-top">
                         <ul class="bottom-left-first" id="change">
-                            <li value="1" onclick="change(this)">动态</li>
-                            <li value="2" onclick="change(this)">回答0</li>
-                            <li value="3" onclick="change(this)">分享1</li>
-                            <li value="4" onclick="change(this)">提问0</li>
-                            <li value="5" onclick="change(this)">收藏0</li>
-                            <li value="6" onclick="change(this)">关注</li>
+                            <li id="check1" value="1" onclick="change(this)">动态</li>
+                            <li id="check2" value="2" onclick="change(this)">回答 <span style="font-weight:400!important;"> 0</span></li>
+                            <li id="check3" value="3" onclick="change(this)">分享 <span style="font-weight:400!important;"> 5</span></li>
+                            <li id="check4" value="4" onclick="change(this)">提问 <span style="font-weight:400!important;"> 2</span></li>
+                            <li id="check5" value="5" onclick="change(this)">收藏 <span style="font-weight:400!important;"> 3</span></li>
+                            <li id="check6" value="6" onclick="change(this)">关注</li>
+                            <span id="na1" class="na1"></span>
                         </ul>
                     </div>
                     
@@ -186,17 +187,24 @@
             
         </div>
     <script type="text/javascript">
+        function $(id){
+            return document.getElementById(id);
+        }
         function change(yy){
-            var dongtai = document.getElementById("dongtai");
-            var huida = document.getElementById("huida");
-            var fenxiang = document.getElementById("fenxiang");
-            var tiwen = document.getElementById("tiwen");
-            var shoucang = document.getElementById("shoucang");
-            var guanzhu = document.getElementById("guanzhu");
+            var dongtai = $("dongtai");
+            var huida = $("huida");
+            var fenxiang = $("fenxiang");
+            var tiwen = $("tiwen");
+            var shoucang = $("shoucang");
+            var guanzhu = $("guanzhu");
+            var na1 = $("na1");
+            var check1 = $("check1");
+            var check2 = $("check2");
+            var check3 = $("check3");
+            var check4 = $("check4");
+            var check5 = $("check5");
+            var check6 = $("check6");
             var num = yy.value;
-            for(var i = 1;i <= yy.value.length;i++){
-                alert(yy.value);
-            }
             if(num == 1){
                 dongtai.style.display = "block";
                 huida.style.display = "none";
@@ -204,6 +212,13 @@
                 tiwen.style.display = "none";
                 shoucang.style.display = "none";
                 guanzhu.style.display="none";
+                na1.style.left = "6px";
+                check1.style.fontWeight = "900";
+                check2.style.fontWeight = "400";
+                check3.style.fontWeight = "400";
+                check4.style.fontWeight = "400";
+                check5.style.fontWeight = "400";
+                check6.style.fontWeight = "400";
             }else if(num == 2){
                 dongtai.style.display = "none";
                 huida.style.display = "block";
@@ -211,6 +226,13 @@
                 tiwen.style.display = "none";
                 shoucang.style.display = "none";
                 guanzhu.style.display="none";
+                na1.style.left = "122px";
+                check1.style.fontWeight = "400";
+                check2.style.fontWeight = "900";
+                check3.style.fontWeight = "400";
+                check4.style.fontWeight = "400";
+                check5.style.fontWeight = "400";
+                check6.style.fontWeight = "400";
             }else if(num == 3){
                 dongtai.style.display = "none";
                 huida.style.display = "none";
@@ -218,6 +240,13 @@
                 tiwen.style.display = "none";
                 shoucang.style.display = "none";
                 guanzhu.style.display="none";
+                na1.style.left = "233px";
+                check1.style.fontWeight = "400";
+                check2.style.fontWeight = "400";
+                check3.style.fontWeight = "900";
+                check4.style.fontWeight = "400";
+                check5.style.fontWeight = "400";
+                check6.style.fontWeight = "400";
             }else if(num == 4){
                 dongtai.style.display = "none";
                 huida.style.display = "none";
@@ -225,6 +254,14 @@
                 tiwen.style.display = "block";
                 shoucang.style.display = "none";
                 guanzhu.style.display="none";
+                na1.style.left = "343px";
+                check1.style.fontWeight = "400";
+                check2.style.fontWeight = "400";
+                check3.style.fontWeight = "400";
+                check4.style.fontWeight = "900";
+                check5.style.fontWeight = "400";
+                check6.style.fontWeight = "400";
+
             }else if(num == 5){
                 dongtai.style.display = "none";
                 huida.style.display = "none";
@@ -232,6 +269,13 @@
                 tiwen.style.display = "none";
                 shoucang.style.display = "block";
                 guanzhu.style.display="none";
+                na1.style.left = "453px";
+                check1.style.fontWeight = "400";
+                check2.style.fontWeight = "400";
+                check3.style.fontWeight = "400";
+                check4.style.fontWeight = "400";
+                check5.style.fontWeight = "900";
+                check6.style.fontWeight = "400";
             }else{
                 dongtai.style.display = "none";
                 huida.style.display = "none";
@@ -239,6 +283,13 @@
                 tiwen.style.display = "none";
                 shoucang.style.display = "none";
                 guanzhu.style.display="block";
+                na1.style.left = "557px";
+                check1.style.fontWeight = "400";
+                check2.style.fontWeight = "400";
+                check3.style.fontWeight = "400";
+                check4.style.fontWeight = "400";
+                check5.style.fontWeight = "400";
+                check6.style.fontWeight = "900";
             }
         }
     </script>

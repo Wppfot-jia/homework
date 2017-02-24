@@ -34,6 +34,7 @@ body{
 }
 .nav-first li{
 	float:left;
+	color:rgb(133,144,166);
 	padding:22px 5px 22px 5px;
 }
 .nav-secend li{
@@ -45,7 +46,8 @@ body{
 	height:45px;
 	font-size:20px;
 	margin-top:14px;
-	font-weight:bold;
+	color:rgb(159,173,199);
+	font-weight:600;
 	background-color:rgb(247,248,250);
 	float:left;
     border:1px solid rgb(231,234,241);
@@ -193,9 +195,11 @@ body{
 }
 .bottom-left-first,.bottom-left-secend{
     list-style-type:none;
+    position:relative;
     
 }
 .bottom-left-first li{
+	color:rgb(64,64,64);
 	font-size:20px;
 	padding:20px;
 	width:60px;
@@ -203,20 +207,33 @@ body{
     cursor:pointer;
 	float:left;
 }
+#check1{
+	font-weight:900;
+}
+.na1{
+	position:absolute;
+	left:6px;
+	top:68px;
+	margin:0 .8em;
+	width:4em;
+	height:4px;
+	background:#0f88eb;
+/*	transition:all 0.3s;*/
+}
 
 .bottom-left-secend li{
 	cursor:pointer;
 	padding:19px;
 	width:150px;
 	margin-left:10px;
-
-	float:left;
-    font-size:25px;
+    float:left;
+    font-size:20px;
+}
+.bottom-left-secend li:first-child{
+	font-weight:900;
 }
 
-.jj{
-	font-weight:700;
-}
+
 
 .bottom-image{
     width:100%;
