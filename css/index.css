@@ -78,15 +78,11 @@
 	font-size:20px;
 	margin-right:15px;
 }
-
-
-
-
 .nav_question_contain{
 	display:none;
 	width:690px;
 	height:670px;
-	background-color:rgb(200,200,200);
+	background-color:rgb(230,230,230);
 	position:fixed;
     left:620px;
     top:140px;
