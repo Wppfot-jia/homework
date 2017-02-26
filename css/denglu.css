@@ -72,7 +72,7 @@ body{
 	top:180px;
 	margin:0 .8em;
 	width:2.4em;
-	height:2px;
+	height:3px;
 	background:#0f88eb;
 	transition:all 0.3s;
 }
@@ -82,7 +82,7 @@ body{
 	top:180px;
 	margin:0 .8em;
 	width:2.4em;
-	height:2px;
+	height:3px;
 	background:#0f88eb;
 	transition:all 0.3s;
 }
@@ -161,10 +161,11 @@ body{
     top:8px;
 }
 .input2 .sign{
+	cursor:pointer;
 	width:330px!important;
     background-color:rgb(15,136,235);
     border:none;
-    border-radius:5px;
+    border-radius:4px;
     position:relative;
     top:-79px;
     color:#ffffff;
@@ -226,13 +227,14 @@ body{
     background-color:#f8f7f7;
 }
 .input1 .wenzhi{
+	cursor:pointer;
 	display:block;
 	width:330px;
 	height:45px;
 	background-color:#0f88eb;
 	position:relative;
 	top:-138px;
-	border-radius:3px;
+	border-radius:4px;
 	text-align:center;
 	line-height:45px;
 	border:none;
@@ -264,12 +266,15 @@ body{
 	color:#a1a2a2;
 	font-size:14px;
 }
-
+.te7 a:link{
+    text-decoration:none;
+}
 .input1 .te7 a:hover{
     color:#55abed;
 }
 
 .input1 .te8{
+	cursor:pointer;
 	display:block;
 	width:330px;
 	height:45px;
@@ -280,32 +285,16 @@ body{
 	text-align:center;
 	line-height:45px;
 }
-/*.bottom-first{
-	text-align:center;
-    width:1800px;
-	height:20px;
-	position:relative;
-	left:50%;
-	margin-left:-900px;
-	bottom:25px;
+.download .te8{
+	cursor:pointer;
 }
-.bottom{
-	color:#b2c1cc;
-	font-size:small;
-}*/
 .bottom a:link{
 	color:#b2c1cc;
 	text-decoration:none;
 }
-/*.bottom-secend{
-    text-align:center;
-    width:1800px;
-	height:20px;
-	position:relative;
-	left:50%;
-	margin-left:-900px;
-	bottom:5px;
-}*/
+.bottom a:hover{
+    text-decoration:underline;
+}
 .dot{
 	margin:0 3px;
 }

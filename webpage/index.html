@@ -8,7 +8,46 @@
         </script>
     </head>
     <body>
-        <div class="nav">
+        
+                    <!--这里是提问的板块,放到这里-->
+        
+        <div class="nav_question_contain" id="alert_tiwen">
+            <div class="tiwen-top">
+                <span>提问</span>
+                <img src="../img/delate-tiwen.png" onclick="delate_tiwen()">
+            </div>
+            <ul class="tiwen-body-first">
+                <li>知乎是一个真诚、友善、认真、互助的社区</li>
+                <li>我们希望每一个疑惑都有解答，好的问题更容易得到好答案<a href="#"> 如何提一个好问题？</a></li>
+            </ul>
+            <ul class="tiwen-body-secend">
+                <li>提问应遵循真实、客观、简洁、明确、规范的原则</li>
+                <li>1、提问应尽可能简洁明了，避免「请问」「有谁知道」「谢谢！」等与问题本身无关的附加语。</li>
+                <li>2、应避免使用「为神马」「童鞋」「肿么办」等网络用语。</li>
+                <li>3、基于个人判断或传言的问题，在提问时应在补充说明里详细说明原由</li>
+                <li>4、避免太宽泛问题，如调查性的问题容易变成每个人都可以发表观点，但对其他人没有价值</li>
+            </ul>
+            <ul class="tiwen-body-third">
+                <li>知乎禁止这些提问</li>
+                <li>1、和已有问题完全重复的问题，为避免重复，提问前可以先进行搜索</li>
+                <li>2、招聘 / 求职、交易 / 合作、寻人 / 征友、召集 / 赠送、求码类内容</li>
+                <li>3、投票类问题。例如：你支持方舟子还是韩寒？</li>
+                <li>4、作业或其他希望代为完成个人任务类的内容，以及针对个人具体病情的求医问药类问题完整的提问建议可查看<a href="#">知乎的提问规范有哪些？</a></li>
+            </ul>
+            <ul class="tiwen-body-forth">
+                <li>提问前请先搜索</li>
+            </ul>
+            <ul class="tiwen-body-fifth">
+                <li><input type="text" placeholder="请输入你的问题"></li>
+            </ul>
+        </div>
+
+                <!--这里是提问的板块,放到这里-->
+
+
+
+
+        <div class="nav" id="nav">
             <div class="nav_contain">
                 <div class="search">
                     <a href="index.html"><img class="s1" src="../img/search-zhihu.png"></a>
@@ -30,16 +69,16 @@
                     <span>王佳</span>
                     <ul id="ul">
                         <a href="./history.html"><li id="Li1$" onmouseout="omoutLi1$()" onmouseover="omoverLi1$()">我的主页</li></a>
-                        <li id="Li2$" onmouseout="omoutLi2$()" onmouseover="omoverLi2$()">私信</li>
-                        <li id="Li3$" onmouseout="omoutLi3$()" onmouseover="omoverLi3$()">设置</li>
-                        <li id="Li4$" onmouseout="omoutLi4$()" onmouseover="omoverLi4$()">退出</li>
+                        <a href="#"><li id="Li2$" onmouseout="omoutLi2$()" onmouseover="omoverLi2$()">私信</li></a>
+                        <a href="#"><li id="Li3$" onmouseout="omoutLi3$()" onmouseover="omoverLi3$()">设置</li></a>
+                        <a href="../denglu.html" target="_top"><li id="Li4$" onmouseout="omoutLi4$()" onmouseover="omoverLi4$()">退出</li></a>
                     </ul>
                 </div>
                 
-                <a href="#"><div class="nav_question">提问</div></a>
+                <div class="nav_question" onclick="tiwen()">提问</div>
             </div>
         </div>
-        <div class="contain">
+        <div class="contain" id="contain">
             <div class="left">
                 <div class="left_first">
                     <div class="first_top">
@@ -47,7 +86,6 @@
                         <div class="first_left">
                             <ul>
                                 <li>提问</li>
-                                <li>回答</li>
                                 <a href="question.html" target="_blank"><li>写文章</li></a>
                             </ul>
                             <span>草稿</span>
@@ -78,7 +116,7 @@
                                 <img id="de1" onclick="ocDe1()" src="../img/delate.png">
                             </div>
                             <div class="open-secend">
-                                <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>煮泡面时，如何正确地打鸡蛋？</span></a>
+                                <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span style="color:rgb(34,85,153);">煮泡面时，如何正确地打鸡蛋？</span></a>
                             </div>
                             <div class="open-third">
                                 <span class="open-third-left">下厨房, </span>
@@ -168,7 +206,7 @@
                                     <img id="de1-m" onclick="ocDe1_m()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>煮泡面时，如何正确地打鸡蛋？</span></a>
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span style="color:rgb(34,85,153);">煮泡面时，如何正确地打鸡蛋？</span></a>
                                 </div>
                                 <div class="main-third">
                                     <span class="main-third-left">下厨房, </span>
@@ -202,7 +240,7 @@
                                     <img id="de2" onclick="ocDe2()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>如何评价新海诚？</span></a>
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span style="color:rgb(34,85,153);">如何评价新海诚？</span></a>
                                 </div>
                                 <div class="main-third">
                                     <span class="main-third-left">lens, </span>
@@ -236,7 +274,7 @@
                                     <img id="de3" onclick="ocDe3()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>骗术大全之意大利 | 100美元的幸运绳？这真是一个悲伤的故事</span></a>
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span style="color:rgb(34,85,153);">骗术大全之意大利 | 100美元的幸运绳？这真是一个悲伤的故事</span></a>
                                 </div>
                                 <div class="main-third">
                                     <span class="main-third-left">穷游锦囊, </span>
@@ -270,7 +308,7 @@
                                     <img id="de4" onclick="ocDe4()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>2016年,你拍过的最棒的图片是那一张？</span></a>
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span style="color:rgb(34,85,153);">2016年,你拍过的最棒的图片是那一张？</span></a>
                                 </div>
                                 <div class="main-third">
                                     <span class="main-third-left">ENJOY精选美食电商, </span>
@@ -304,7 +342,7 @@
                                     <img id="de5" onclick="ocDe5()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>开车不用慌，老司机带带你 | 新书上架📚？</span></a>
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span style="color:rgb(34,85,153);">开车不用慌，老司机带带你 | 新书上架📚？</span></a>
                                 </div>
                                 <div class="main-third">
                                     <span class="main-third-left">知乎电子书, </span>
@@ -338,7 +376,7 @@
                                     <img id="de6" onclick="ocDe6()" src="../img/delate.png">
                                 </div>
                                 <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span>如何评价 2016 年 11 月 8 日美国总统大选结果？</span></a>
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span style="color:rgb(34,85,153);">如何评价 2016 年 11 月 8 日美国总统大选结果？</span></a>
                                 </div>
                                 <div class="main-third">
                                     <span class="main-third-left">iWeekly周末画报, </span>
@@ -775,6 +813,22 @@
             var mass = $("mass");
             open_$.style.display = "none";
             mass.style.display = "block";
+        }
+        function tiwen(){
+            var tiwen = $("alert_tiwen");
+            var nav = $("nav");
+            var contain = $("contain");
+            tiwen.style.display = "block";
+            nav.style.filter = "opacity(0.3)";
+            contain.style.filter = "opacity(0.3)";
+        }
+        function delate_tiwen(){
+            var nav = $("nav");
+            var contain = $("contain");
+            var tiwen = $("alert_tiwen");
+            tiwen.style.display = "none";
+            nav.style.filter = "opacity(1)";
+            contain.style.filter = "opacity(1)";
         }
     </script>
     </body>
