@@ -69,7 +69,7 @@
 	margin-right:-70px;
 	border-radius:5px;
 	display:none;
-	border:1px solid #b3b3b3;
+
 }
 .help li{
 	margin-left:20px;
@@ -142,4 +142,14 @@
 	overflow-x:hidden;
 	overflow-y:hidden;
 	outline:medium;
+}
+
+
+
+#my_canvas{
+	top:-5px;
+/*	border:2px solid black;*/
+    right:35px;
+	position:relative;
+/*	background-color:pink;*/
 }

@@ -15,14 +15,16 @@
             <a href="index.html" target="_blank" onmouseover="onmouseoverHelp()" onmouseout="onmouseoutHelp()"><img class="img-2" src="../img/tip.png"></a>
             <div class="send">发布</div>
             <span class="see">邀请预览</span>
-            <div class="help" id="help">
-                <ul>
-                    <a href="#" ><li name="help" id="$1" value="$1" onmouseover="checkColor()" onmouseout="returnColor()">写文章</li></a>
+            <div class="help" id="help" onmouseover="onmouseoverHelp()" onmouseout="onmouseoutHelp()">
+                
+                <canvas width="295px" height="230px" id="my_canvas">
+           <!--          <a href="#" ><li name="help" id="$1" value="$1" onmouseover="checkColor()" onmouseout="returnColor()">写文章</li></a>
                     <a href="#" ><li name="help" id="$2" value="$2" onmouseover="checkColor()" onmouseout="returnColor()">草稿</li></a>
                     <a href="#" ><li name="help" id="$3" value="$3" onmouseover="checkColor()" onmouseout="returnColor()">我的文章</li></a>
                     <a href="#" ><li name="help" id="$4" value="$4" onmouseover="checkColor()" onmouseout="returnColor()">专栏发现</li></a>
-                    <a href="#" ><li name="help" id="$5" value="$5" onmouseover="checkColor()" onmouseout="returnColor()">删除草稿</li></a>
-                </ul>
+                    <a href="#" ><li name="help" id="$5" value="$5" onmouseover="checkColor()" onmouseout="returnColor()">删除草稿</li></a> -->
+                </canvas>
+            
             </div>
         </div>
         <div class="contain">
@@ -37,6 +39,60 @@
             <textarea class="text_part" id="text_part"  onfocus="onfocusTextPart()" onblur="onblurTextPart()">请输入正文</textarea>
         </div>
     <script type="text/javascript">
+        var my_canvas = document.getElementById("my_canvas");
+        var my_huabi = my_canvas.getContext("2d");
+        
+        my_huabi.fillStyle = "white";
+        my_huabi.beginPath();
+        my_huabi.moveTo(10,40);
+        my_huabi.lineTo(10,200);
+        my_huabi.arcTo(10,220,30,220,20);
+        my_huabi.lineTo(265,220);
+        my_huabi.arcTo(285,220,285,200,20);
+        my_huabi.lineTo(285,40);
+        my_huabi.arcTo(285,20,265,20,20);
+        my_huabi.lineTo(240,20);
+        my_huabi.lineTo(225,5);
+        my_huabi.lineTo(210,20);
+        my_huabi.lineTo(30,20);
+        my_huabi.arcTo(10,20,10,40,20);
+        my_huabi.closePath();
+        my_huabi.stroke();
+        my_huabi.fill();
+        
+        my_huabi.strokeStyle = "silver";
+        my_huabi.beginPath();
+        my_huabi.moveTo(20,85);
+        my_huabi.lineTo(275,85);
+        my_huabi.stroke();
+        
+        my_huabi.strokeStyle = "silver";
+        my_huabi.beginPath();
+        my_huabi.moveTo(20,155);
+        my_huabi.lineTo(275,155);
+        my_huabi.stroke();
+
+        my_huabi.font = "20px MicrosoftYaHei";
+        my_huabi.strokeText("草稿",40,60);
+        my_huabi.strokeText("我的文章",40,130);
+        my_huabi.strokeText("专栏 发现",40,200);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         function $(id){
             return document.getElementById(id);
         }
