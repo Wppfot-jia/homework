@@ -28,15 +28,21 @@
             </div>
         </div>
         <div class="contain">
-            <div class="image">
-                <input class="image_input" type="file" accept=".jpeg, .jpg, .png">
-            </div>
-            
-            <input type="text" class="title" id="title" value="请输入标题" onfocus="onfocusTitle()" onblur="onblurTitle()">
-            
-            <div class="tool">
-            </div>
-            <textarea class="text_part" id="text_part"  onfocus="onfocusTextPart()" onblur="onblurTextPart()">请输入正文</textarea>
+            <from action="./index.html" method="post">
+                <div class="image">
+                    <input class="image_input" type="file" accept=".jpeg, .jpg, .png">
+                </div>
+                
+                <input type="text" class="title" id="title" value="请输入标题" onfocus="onfocusTitle()" onblur="onblurTitle()">
+                
+                <div class="tool">
+                </div>
+                <textarea class="text_part" id="text_part"  onfocus="onfocusTextPart()" onblur="onblurTextPart()">请输入正文</textarea>
+
+                <div class="topic">
+                    
+                </div>
+            </from>
         </div>
     <script type="text/javascript">
         var my_canvas = document.getElementById("my_canvas");

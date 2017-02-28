@@ -68,6 +68,7 @@
 	background-color:#ffffff;
 	margin-right:-70px;
 	border-radius:5px;
+
 	display:none;
 
 }
@@ -152,4 +153,11 @@
     right:35px;
 	position:relative;
 /*	background-color:pink;*/
+}
+
+.topic{
+	width:400px;
+	height:335px;
+	background-color:pink;
+	
 }

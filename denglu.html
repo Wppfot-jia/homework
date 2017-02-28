@@ -20,21 +20,21 @@
 	            	
 	            </ul>
 	            <ul class="input1" id="input1">
-	            	<form action="./webpage/success.html" method="post" onsubmit="return checkForm()"> 
+	            	<form action="./php/insert.php" method="post" onsubmit="return checkForm()"> 
 	 	            	<li>
-	 	            	    <input type="text" id="name" onblur="onblurName()" value="" name="" placeholder="姓名">
+	 	            	    <input type="text" id="name" onblur="onblurName()" value="" name="name" placeholder="姓名">
 	 	            	    <span class="" id="s_name"></span>
 	 	            	</li>
 	 	            	<li class="te3">
-			            	<input type="text" id="tel" onblur="onblurTel()" name="" placeholder="手机号(仅支持中国大陆)">
+			            	<input type="text" id="tel" onblur="onblurTel()" name="phone" placeholder="手机号(仅支持中国大陆)">
 			            	<span class="" id="s_tel"></span>
 		            	</li>
 		            	<li class="te4">
-			            	<input type="password" id="pwd" onblur="onblurPwd()" name="" placeholder="密码(不少于6位)">
+			            	<input type="password" id="pwd" onblur="onblurPwd()" name="password" placeholder="密码(不少于6位)">
 			            	<span class="" id="s_pwd"></span>
 		            	</li>
 		            	<li class="te5" id="te5" >
-		            	    <input type="text" id="check" onblur="onblurCheck()" name="" placeholder="验证码">
+		            	    <input type="text" id="check" onblur="onblurCheck()" name="check" placeholder="验证码">
 		            	    <span class="" id="s_check"></span>
 		            	    <img class="imgck" title="看不清楚?换一张" src="./img/check.png">
 		            	</li>
@@ -49,13 +49,13 @@
 	            </ul>
 
 	            <ul class="input2" id="input2">
-	                <form action="./webpage/index.html" method="post" onsubmit="return checkForm_dl()">
+	                <form action="./php/check.php" method="post" onsubmit="return checkForm_dl()">
 	                    <li>
-	 	            	    <input type="text" id="name2" onblur="onblurName2()" value="" name="" placeholder="手机号或邮箱">
+	 	            	    <input type="text" id="name2" onblur="onblurName2()" value="" name="phone2" placeholder="手机号或邮箱">
 	 	            	    <span class="" id="s_name2"></span>
 	 	            	</li>
 	 	            	<li class="pwd">
-			            	<input type="password" onblur="onblurPwd2()" id="pwd2" name="" placeholder="密码">
+			            	<input type="password" onblur="onblurPwd2()" id="pwd2" name="psw" placeholder="密码">
 			            	<span class="" id="s_pwd2"></span>
 			            </li>
 			            <li class="code">
@@ -222,14 +222,10 @@
                 return false;
             }else if(!onblurPwd2()){
             	return false;
-            }else if(name2.value == "18323777183" && pwd2.value == "wangjia"){
-            	return true;
             }else{
-            	alert("你输入的账号或密码不正确!");
-            	name2.value = "";
-            	pwd2.value = "";
-            	return false;
+                return true;
             }
+
         }
     	function onblurName2(){
     		var name2 = $("name2");
