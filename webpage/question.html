@@ -28,21 +28,26 @@
             </div>
         </div>
         <div class="contain">
-            <from action="./index.html" method="post">
+            <form action="../php/inserttext.php" method="post">
                 <div class="image">
-                    <input class="image_input" type="file" accept=".jpeg, .jpg, .png">
+                    <input class="image_input" type="file" name="image" accept=".jpeg, .jpg, .png">
                 </div>
                 
-                <input type="text" class="title" id="title" value="请输入标题" onfocus="onfocusTitle()" onblur="onblurTitle()">
+                <input type="text" class="title" id="title" value="请输入标题" onfocus="onfocusTitle()" onblur="onblurTitle()" name="title">
                 
                 <div class="tool">
                 </div>
-                <textarea class="text_part" id="text_part"  onfocus="onfocusTextPart()" onblur="onblurTextPart()">请输入正文</textarea>
+                <textarea class="text_part" id="text_part" name="text"  onfocus="onfocusTextPart()" onblur="onblurTextPart()">请输入正文</textarea>
 
                 <div class="topic">
-                    
+                    <ul>
+                        <li>发布文章</li>
+                        <li>绑定合适的话题，能方便分类检索，文章也更容易让读者发现。</li>
+                        <li><input class="input999" type="text" name="topic" placeholder="搜索话题..."></li>
+                        <li><input class="input666" type="submit" value="确定" </li>
+                    </ul>
                 </div>
-            </from>
+            </form>
         </div>
     <script type="text/javascript">
         var my_canvas = document.getElementById("my_canvas");
