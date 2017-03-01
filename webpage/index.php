@@ -22,25 +22,6 @@ while($row = mysql_fetch_assoc($res)){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -93,7 +74,7 @@ while($row = mysql_fetch_assoc($res)){
         <div class="nav" id="nav">
             <div class="nav_contain">
                 <div class="search">
-                    <a href="index.html"><img class="s1" src="../img/search-zhihu.png"></a>
+                    <a href="index.php"><img class="s1" src="../img/search-zhihu.png"></a>
                     <form method="get" action="index.html">
                         <input id="search-input" type="text" placeholder="&nbsp;搜索你感兴趣的内容..." value="">
                         <input id="search-search" type="image" src="../img/search-2.png">

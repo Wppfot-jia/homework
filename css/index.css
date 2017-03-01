@@ -459,7 +459,7 @@
 
 }
 .main-first img{
-	margin-left:540px;
+    margin-left:540px;
 }
 .main-secend{
 	width:740px;
@@ -629,7 +629,17 @@
 	text-decoration:none;
 }
 
+
+
+
+
+/*补加内容*/
+
 #de1-m{
-	width:60px;
-	height:60px;
+	float:right;
+}
+
+.delated img{
+	float:right;
+	margin-top:15px;
 }

@@ -27,7 +27,7 @@ if(!$row){
 	exit;
 }else{
 	echo "<script>alert('登录成功');
-	window.location.href='../webpage/index.html';
+	window.location.href='../webpage/index.php';
 	</script>";
 }
 
