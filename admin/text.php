@@ -7,10 +7,24 @@ mysql_select_db('zhihu');
 
 mysql_query("set names utf8");
 
-$sql = "select * from text order by id desc";
+
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+$pagesize = 5;
+
+$offset = ($page-1)*$pagesize;
+
+$res = mysql_query("select * from text");
+
+$total = mysql_num_rows($res);
+
+$pagemax = ceil($total/$pagesize);
+
+
+$sql = "select * from text order by id desc limit $offset,$pagesize";
 
 $res = mysql_query($sql);
-$row = mysql_fetch_assoc($res);
+
 while($row = mysql_fetch_assoc($res)){
     $rows[] = $row;
 }
@@ -27,7 +41,7 @@ while($row = mysql_fetch_assoc($res)){
     <body>
         <div class="contain">
             <div class="nav">
-                <span onclick="index()">后台管理</span>
+                <span class="jjmanage" onclick="index()">后台管理</span>
                 <span onclick="personal()" class="first">账号管理</span>
                 <span onclick="text()" class="secend">文本管理</span>
                
@@ -62,7 +76,7 @@ while($row = mysql_fetch_assoc($res)){
                         <td><?php echo $v['id']?></td>
                         <td><?php echo $v['title']?></td>
                         <td><?php echo $v['topic']?></td>
-                        <td><span onclick="change()" class="change"><a style="color:rgb(66,140,200);text-decoration:none;" href="update-text.php?id=<?php echo $v['id'];?>">修改</a></span>&nbsp;&nbsp;<span onclick="index()" class="delate"><a style="color:rgb(66,140,200);text-decoration:none;" href="update-text.php?id=<?php echo $v['id'];?>">删除</a></span></td>
+                        <td><span onclick="change()" class="change"><a style="color:rgb(66,140,200);text-decoration:none;" href="update-text.php?id=<?php echo $v['id'];?>">修改</a></span>&nbsp;&nbsp;<span onclick="index()" class="delate"><a style="color:rgb(66,140,200);text-decoration:none;" href="delate-text.php?id=<?php echo $v['id'];?>">删除</a></span></td>
                     </tr>
                     <?php endforeach;?>
                    
@@ -70,10 +84,13 @@ while($row = mysql_fetch_assoc($res)){
                 </table>
 
                 <div class="bottom">
-                    <span class="souye">首页</span>
-                    <span class="shangye">上一页</span>
-                    <span class="xiaye">下一页</span>
-                    <span class="moye">末页</span>
+                    <a style="color:rgb(0,0,0);text-decoration:none;" href="text.php ? page=1"><span class="souye">首页</span></a>
+                    
+                    <a style="color:rgb(0,0,0);text-decoration:none;" href="text.php ? page=<?php echo $page<=1 ? $page : $page-1;?>"><span class="shangye">上一页</span></a>
+                    
+                    <a style="color:rgb(0,0,0);text-decoration:none;" href="text.php ? page=<?php echo $page>=$pagemax ? $pagemax : $page+1;?>"><span class="xiaye">下一页</span></a>
+                    
+                    <a style="color:rgb(0,0,0);text-decoration:none;" href="text.php ? page=<?php echo $pagemax;?>"><span class="moye">末页</span></a>
                 </div>
                 
             </div>

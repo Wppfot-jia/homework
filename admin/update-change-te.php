@@ -6,17 +6,16 @@ $topic = $_POST['topic'];
 $image = $_POST['image'];
 $text = $_POST['text'];
 
-
+echo $title . $topic . $image . $text;
 
 
 $conn = @mysql_connect('localhost','root','');
 
-mysql_select_db('zhihu');
-
+mysql_query("use zhihu");
 
 mysql_query("set names utf8");
 
-$sql = "update text set title='{$title}',topic='{$topic}',image='{$image}',text='{$text}' where id='{$id}'";
+$sql = "update denglu set title='{$title}',topic='{$topic}',image='{$image}',text='{$text}' where id='{$id}'";
 
 
 

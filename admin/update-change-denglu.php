@@ -8,6 +8,7 @@ $addtime = date("Y-m-d H:i:s");
 
 $conn = @mysql_connect('localhost','root','');
 
+
 mysql_query("use zhihu");
 
 mysql_query("set names utf8");

@@ -9,7 +9,7 @@
     <body>
         <div class="contain">
             <div class="nav">
-                <span onclick="index()">后台管理</span>
+                <span class="jjmanage" onclick="index()">后台管理</span>
                 <span onclick="personal()" class="first">账号管理</span>
                 <span onclick="text()" class="secend">文本管理</span>
                

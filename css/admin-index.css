@@ -83,3 +83,7 @@ body{
 .left li:last-child{
     border-radius:0 0 5px 5px;
 }
+
+.jjmanage{
+	cursor:pointer;
+}
