@@ -62,7 +62,7 @@ while($row = mysql_fetch_assoc($res)){
                         <td><?php echo $v['id']?></td>
                         <td><?php echo $v['title']?></td>
                         <td><?php echo $v['topic']?></td>
-                        <td><span onclick="change()" class="change">修改</span>&nbsp;&nbsp;<span onclick="index()" class="delate">删除</span></td>
+                        <td><span onclick="change()" class="change"><a style="color:rgb(66,140,200);text-decoration:none;" href="update-text.php?id=<?php echo $v['id'];?>">修改</a></span>&nbsp;&nbsp;<span onclick="index()" class="delate"><a style="color:rgb(66,140,200);text-decoration:none;" href="update-text.php?id=<?php echo $v['id'];?>">删除</a></span></td>
                     </tr>
                     <?php endforeach;?>
                    

@@ -1,3 +1,22 @@
+<?php
+$id = $_GET['id'];
+header("content-type:text/html;charset=utf-8");
+
+$conn = @mysql_connect('localhost','root','');
+
+mysql_select_db('zhihu');
+
+mysql_query("set names utf8");
+
+$sql = "select * from text where id='{$id}'";
+
+$res = mysql_query($sql);
+
+$row = mysql_fetch_assoc($res);
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +29,7 @@
         }
         .contain{
 
-            width:900px;
+            width:1100px;
             margin:100px auto;
         }
         .sign{
@@ -87,37 +106,38 @@
         <div class="contain">
             <fieldset class="sign">
                 <legend>修改文章</legend>
-                <form action="index.html" method="get" class="form" onsubmit="return checkForm()">
+                <form action="update-change-text.php" method="post" class="form" onsubmit="return checkForm()">
                     <dl class="list">
                         <dt>输入标题:</dt>
                         <dd>
-                            <input type="text" value="" id="email" onfocus="onfocusEmail()" onblur="onblurEmail()">
+                            <input type="text" name="title" value="<?php echo $row['title']?>" id="email" onfocus="onfocusEmail()" onblur="onblurEmail()">
                             <span class="" id="s-email"></span>
                         </dd>
                     </dl>
                     <dl class="list">
                         <dt>修改话题:</dt>
                         <dd>
-                            <input type="text" value="" id="name" onfocus="onfocusName()" onblur="onblurName()">
+                            <input type="text" name="topic" value="<?php echo $row['topic']?>" id="name" onfocus="onfocusName()" onblur="onblurName()">
                             <span class="" id="s-name"></span>
                         </dd>
                     </dl>
                     <dl class="list">
                         <dt>修改图片:</dt>
                         <dd>
-                            <input type="file" value="" id="pwd" onfocus="onfocusPwd()" onblur="onblurPwd()">
+                            <input name="image" type="file" value="<?php echo $row['image']?>" id="pwd" onfocus="onfocusPwd()" onblur="onblurPwd()">
                             <span class="" id="s-pwd"></span>
                         </dd>
                     </dl>
                     <dl class="list">
                         <dt>修改正文:</dt><br>
                         <dd>
-                            <textarea class="text" rows="15" cols="100" value="" id="textarea" onfocus="onfocusTextarea()" onblur="onblurTextarea()">哈哈哈哈
+                            <input class="text" name="text" style="width:730px;height:80px;" value="<?php echo $row['text']?>" id="textarea" onfocus="onfocusTextarea()" onblur="onblurTextarea()">
                                 
-                            </textarea>
+                            </input>
                             <span class="" id="s-textarea"></span>
                         </dd>
                     </dl>
+                    <input type="hidden" name="id" value="<?php echo $row['id']?>" >
                     <input class="queren" type="submit" value="确认修改">
                 </form>
             </fieldset>

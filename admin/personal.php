@@ -65,7 +65,7 @@ while($row = mysql_fetch_assoc($res)){
                         <td><?php echo $v['phone']?></td>
                         <td><?php echo $v['password']?></td>
                         <td><?php echo $v['addtime']?></td>
-                        <td><span onclick="change()" class="change">修改</span>&nbsp;&nbsp;<span class="delate">删除</span></td>
+                        <td><span onclick="change()" class="change"><a style="color:rgb(66,140,200);text-decoration:none;" href="update-denglu.php?id=<?php echo $v['id'];?>">修改</a></span>&nbsp;&nbsp;<span class="delate"><a style="color:rgb(66,140,200);text-decoration:none;" href="update-denglu.php?id=<?php echo $v['id'];?>">删除</a></span></td>
                     </tr>
                     <?php endforeach;?>
 

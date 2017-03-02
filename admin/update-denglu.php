@@ -1,3 +1,23 @@
+<?php
+$id = $_GET['id'];
+header("content-type:text/html;charset=utf-8");
+
+$conn = @mysql_connect('localhost','root','');
+
+mysql_select_db('zhihu');
+
+mysql_query("set names utf8");
+
+$sql = "select * from denglu where id='{$id}'";
+
+$res = mysql_query($sql);
+
+$row = mysql_fetch_assoc($res);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -79,35 +99,36 @@
         <div class="contain">
             <fieldset class="sign">
                 <legend>修改账户信息</legend>
-                <form action="index.html" method="get" class="form" onsubmit="return checkForm()">
+                <form action="update-change-denglu.php" method="post" class="form" onsubmit="return checkForm()">
                     <dl class="list">
                         <dt>输入名字:</dt>
                         <dd>
-                            <input type="text" value="" id="email" onfocus="onfocusEmail()" onblur="onblurEmail()">
+                            <input type="text" name="name" value="<?php echo $row['name']?>" id="email" onfocus="onfocusEmail()" onblur="onblurEmail()">
                             <span class="" id="s-email"></span>
                         </dd>
                     </dl>
                     <dl class="list">
                         <dt>手机号码:</dt>
                         <dd>
-                            <input type="text" value="" id="name" onfocus="onfocusName()" onblur="onblurName()">
+                            <input type="text" name="phone" value="<?php echo $row['phone']?>" id="name" onfocus="onfocusName()" onblur="onblurName()">
                             <span class="" id="s-name"></span>
                         </dd>
                     </dl>
                     <dl class="list">
                         <dt>输入密码:</dt>
                         <dd>
-                            <input type="password" value="" id="pwd" onfocus="onfocusPwd()" onblur="onblurPwd()">
+                            <input type="password" value="<?php echo $row['password']?>" name="password" id="pwd" onfocus="onfocusPwd()" onblur="onblurPwd()">
                             <span class="" id="s-pwd"></span>
                         </dd>
                     </dl>
                     <dl class="list">
                         <dt>确认密码:</dt>
                         <dd>
-                            <input type="password" value="" id="rpwd" onfocus="onfocusRpwd()" onblur="onblurRpwd()">
+                            <input type="password" value="<?php echo $row['password']?>" id="rpwd" onfocus="onfocusRpwd()" onblur="onblurRpwd()">
                             <span class="" id="s-rpwd"></span>
                         </dd>
                     </dl>
+                    <input type="hidden" name="id" value="<?php echo $row['id']?>" >
                     <input class="queren" type="submit" value="确认修改">
                 </form>
             </fieldset>
