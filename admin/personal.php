@@ -23,6 +23,11 @@ $pagemax = ceil($total/$pagesize);
 
 
 
+$sqlm = "select * from denglu order by id desc limit 0,10";
+$resm = mysql_query($sqlm);
+while($rowm = mysql_fetch_assoc($resm)){
+    $rowsm[] = $rowm;
+}
 
 
 
@@ -36,6 +41,7 @@ $res = mysql_query($sql);
 while($row = mysql_fetch_assoc($res)){
     $rows[] = $row;
 }
+// var_dump($rows);
 ?>
 
 
@@ -60,7 +66,7 @@ while($row = mysql_fetch_assoc($res)){
                 <ul>
                     <li>管理列表</li>
                     <li>账号管理</li>
-                    <?php foreach($rows as $k=>$v):?>
+                    <?php foreach($rowsm as $k=>$v):?>
                     <li><?php echo $v['id']?>.<?php echo $v['name']?></li>
                     <?php endforeach;?>
                     

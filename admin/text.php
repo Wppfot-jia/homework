@@ -21,6 +21,20 @@ $total = mysql_num_rows($res);
 $pagemax = ceil($total/$pagesize);
 
 
+
+
+
+$sqlm = "select * from text order by id desc limit 0,10";
+$resm = mysql_query($sqlm);
+while($rowm = mysql_fetch_assoc($resm)){
+    $rowsm[] = $rowm;
+}
+
+
+
+
+
+
 $sql = "select * from text order by id desc limit $offset,$pagesize";
 
 $res = mysql_query($sql);
@@ -52,7 +66,7 @@ while($row = mysql_fetch_assoc($res)){
                     <li>管理列表</li>
                     <li>文本管理</li>
                     
-                    <?php foreach($rows as $k=>$v):?>
+                    <?php foreach($rowsm as $k=>$v):?>
                     <li><?php echo $v['id']?>.<?php echo $v['title']?></li>
                     <?php endforeach;?>
                    

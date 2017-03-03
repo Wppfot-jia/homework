@@ -39,6 +39,7 @@
 	
 }
 .top .send{
+	cursor:pointer;
 	border:1px solid #b3b3b3;
 	background-color:#fff;
 	font-size:19px;
@@ -164,6 +165,7 @@
 	right:10px;
 	border:1px solid rgb(235,235,235);
 	border-radius:0 0 5px 5px;
+	display:none;
 }
 .topic ul{
 	list-style-type:none;

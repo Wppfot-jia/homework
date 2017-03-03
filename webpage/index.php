@@ -128,6 +128,92 @@ while($row = mysql_fetch_assoc($res)){
                         <img onclick="ocDelated()" src="../img/delate.png">
                     </div>
                     
+                   
+                    
+
+                    <?php foreach($rows as $k=>$v):?>
+                    <li class="massage" id="mass1">
+                        <div class="main">
+                            <div class="main-left">
+                                <img src="../img/zhiha.png">
+                                <div class="good" id="goodte" onclick="ocGood1()" onmouseover="omoverGood1()"
+                                onmouseout="omoutGood1()">8648</div>
+                            </div>
+                            <div class="main-right">
+                                <div class="main-first">
+                                    <span>热门内容,来自: </span><span><?php echo $v['topic']?></span>
+                                    <img id="de1-m" onclick="ocDe1_m()" src="../img/delate.png">
+                                </div>
+                                <div class="main-secend">
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span style="color:rgb(34,85,153);"><?php echo $v['title']?></span></a>
+                                </div>
+                                <div class="main-third">
+                                    <span class="main-third-left">新内容, </span>
+                                    <span class="main-third-right">展开完美</span>
+                                </div>
+                                <div class="main-forth">
+                                    <div class="main-forth-img">
+                                        <img src="../img2/<?php echo $v['image']?>"> 
+                                    </div>
+                                    <div class="main-forth-word">
+                                        <?php echo $v['text']?>
+                                        <div class="show" id="show" onmouseover="onmouseoverShow()" onmouseout="onmouseoutShow()" ><span onclick="open$()">显示全部</span></div>
+                                    </div>
+                                </div>
+                                <div class="main-fifth">
+                                    <span>1037条评论</span><span class="dot1">·</span><span>去往文章页</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                <?php endforeach;?>
+                    
+
+
+
+
+
+
+
+                    <li class="massage" id="mass">
+                        <div class="main">
+                            <div class="main-left">
+                                <img src="../img/cate.png">
+                                <div class="good" id="good1" onclick="ocGood1()" onmouseover="omoverGood1()"
+                                onmouseout="omoutGood1()">322</div>
+                            </div>
+                            <div class="main-right">
+                                <div class="main-first">
+                                    <span>热门内容,来自: </span><span>美食</span>
+                                    <img id="de1-m" onclick="ocDe1_m()" src="../img/delate.png">
+                                </div>
+                                <div class="main-secend">
+                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span style="color:rgb(34,85,153);">煮泡面时，如何正确地打鸡蛋？</span></a>
+                                </div>
+                                <div class="main-third">
+                                    <span class="main-third-left">下厨房, </span>
+                                    <span class="main-third-right">唯有美食与爱不可辜负</span>
+                                </div>
+                                <div class="main-forth">
+                                    <div class="main-forth-img">
+                                        <img src="../img/noodle.png"> 
+                                    </div>
+                                    <div class="main-forth-word">
+                                        吃泡面的时候，你喜欢吃十二分熟的鸡蛋，还是溏心蛋，又或是碎蛋汤？你有纠结过该什么时候打鸡蛋进去，鸡蛋熟得刚刚好又不会碎吗？看完这篇，学会N种方法花式打鸡蛋！ 面饼有一面有“坑”，你们发现了吗？泡面的面饼不是有一面是凹进去的么…
+                                        <div class="show" id="show" onmouseover="onmouseoverShow()" onmouseout="onmouseoutShow()" ><span onclick="open$()">显示全部</span></div>
+                                    </div>
+                                </div>
+                                <div class="main-fifth">
+                                    <span>1037条评论</span><span class="dot1">·</span><span>去往文章页</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    
+                   
+
                     <div class="open" id="open_$">
                         <div class="open-left">
                             <img src="../img/cate.png">
@@ -218,45 +304,6 @@ while($row = mysql_fetch_assoc($res)){
                         </div>
                     </div>
 
-                    
-
-                    <?php foreach($rows as $k=>$v):?>
-                    <li class="massage" id="mass">
-                        <div class="main">
-                            <div class="main-left">
-                                <img src="../img/zhiha.png">
-                                <div class="good" id="good1" onclick="ocGood1()" onmouseover="omoverGood1()"
-                                onmouseout="omoutGood1()">8648</div>
-                            </div>
-                            <div class="main-right">
-                                <div class="main-first">
-                                    <span>热门内容,来自: </span><span><?php echo $v['topic']?></span>
-                                    <img id="de1-m" onclick="ocDe1_m()" src="../img/delate.png">
-                                </div>
-                                <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span style="color:rgb(34,85,153);"><?php echo $v['title']?></span></a>
-                                </div>
-                                <div class="main-third">
-                                    <span class="main-third-left">新内容, </span>
-                                    <span class="main-third-right">展开完美</span>
-                                </div>
-                                <div class="main-forth">
-                                    <div class="main-forth-img">
-                                        <img src="../img2/<?php echo $v['image']?>"> 
-                                    </div>
-                                    <div class="main-forth-word">
-                                        <?php echo $v['text']?>
-                                        <div class="show" id="show" onmouseover="onmouseoverShow()" onmouseout="onmouseoutShow()" ><span onclick="open$()">显示全部</span></div>
-                                    </div>
-                                </div>
-                                <div class="main-fifth">
-                                    <span>1037条评论</span><span class="dot1">·</span><span>去往文章页</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                <?php endforeach;?>
-                    
 
 
 
@@ -264,40 +311,10 @@ while($row = mysql_fetch_assoc($res)){
 
 
 
-                    <li class="massage" id="mass">
-                        <div class="main">
-                            <div class="main-left">
-                                <img src="../img/cate.png">
-                                <div class="good" id="good1" onclick="ocGood1()" onmouseover="omoverGood1()"
-                                onmouseout="omoutGood1()">322</div>
-                            </div>
-                            <div class="main-right">
-                                <div class="main-first">
-                                    <span>热门内容,来自: </span><span>美食</span>
-                                    <img id="de1-m" onclick="ocDe1_m()" src="../img/delate.png">
-                                </div>
-                                <div class="main-secend">
-                                    <a href="https://zhuanlan.zhihu.com/p/23733336" target="_blank"><span style="color:rgb(34,85,153);">煮泡面时，如何正确地打鸡蛋？</span></a>
-                                </div>
-                                <div class="main-third">
-                                    <span class="main-third-left">下厨房, </span>
-                                    <span class="main-third-right">唯有美食与爱不可辜负</span>
-                                </div>
-                                <div class="main-forth">
-                                    <div class="main-forth-img">
-                                        <img src="../img/noodle.png"> 
-                                    </div>
-                                    <div class="main-forth-word">
-                                        吃泡面的时候，你喜欢吃十二分熟的鸡蛋，还是溏心蛋，又或是碎蛋汤？你有纠结过该什么时候打鸡蛋进去，鸡蛋熟得刚刚好又不会碎吗？看完这篇，学会N种方法花式打鸡蛋！ 面饼有一面有“坑”，你们发现了吗？泡面的面饼不是有一面是凹进去的么…
-                                        <div class="show" id="show" onmouseover="onmouseoverShow()" onmouseout="onmouseoutShow()" ><span onclick="open$()">显示全部</span></div>
-                                    </div>
-                                </div>
-                                <div class="main-fifth">
-                                    <span>1037条评论</span><span class="dot1">·</span><span>去往文章页</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+
+
+
+
                     <li class="massage">
                         <div class="main">
                             <div class="main-left">
@@ -545,6 +562,9 @@ while($row = mysql_fetch_assoc($res)){
                 <span class="dot">·</span>
                 <a target="_blank" href="#">&copy;2017 知乎</a>
                 </div>
+                <div>
+                  <a style="text-decoration:none;" href="../admin/signup.php"><input type="submit" id="wenzhi"  class="wenzhi" value="管&nbsp;理&nbsp;员&nbsp;入&nbsp;口"></a>
+                </div>
             </div>
         </div>
     <script type="text/javascript">
@@ -739,7 +759,6 @@ while($row = mysql_fetch_assoc($res)){
         }
         
         function open$(){
-            
             var open = $("open_$");
             var mass = $("mass");
             open.style.display = "block";
