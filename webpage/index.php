@@ -565,6 +565,18 @@ while($row = mysql_fetch_assoc($res)){
                 <div>
                   <a style="text-decoration:none;" href="../admin/signup.php"><input type="submit" id="wenzhi"  class="wenzhi" value="管&nbsp;理&nbsp;员&nbsp;入&nbsp;口"></a>
                 </div>
+                <div>
+                  <a style="text-decoration:none;" href="./homework/test1.html"><input type="submit" id="wenzhi"  class="wenzhi" value="大&nbsp;宝&nbsp;剑"></a>
+                </div>
+                <div>
+                  <a style="text-decoration:none;" href="./homework/test2.html"><input type="submit" id="wenzhi"  class="wenzhi" value="星&nbsp;星&nbsp;点&nbsp;灯"></a>
+                </div>
+                <div>
+                  <a style="text-decoration:none;" href="./homework/test3.html"><input type="submit" id="wenzhi"  class="wenzhi" value="弹&nbsp;球&nbsp;动&nbsp;画"></a>
+                </div>
+                <div>
+                  <a style="text-decoration:none;" href="./homework/test4.html"><input type="submit" id="wenzhi"  class="wenzhi" value="css3&nbsp;phone"></a>
+                </div>
             </div>
         </div>
     <script type="text/javascript">

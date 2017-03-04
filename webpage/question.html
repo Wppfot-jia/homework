@@ -30,7 +30,7 @@
         <div class="contain">
             <form action="../php/inserttext.php" method="post">
                 <div class="image">
-                    <input class="image_input" required="requird" type="file" name="image" accept=".jpeg, .jpg, .png">
+                    <input class="image_input" required="requird" type="file" id="why" name="image" accept=".jpeg, .jpg, .png">
                 </div>
                 
                 <input type="text" class="title" required="requird" id="title" value="请输入标题" onfocus="onfocusTitle()" onblur="onblurTitle()" name="title">
@@ -181,6 +181,15 @@
         //     $5.style.backgroundColor = "yellow";
 
         // }
+
+        function jj(){
+            var why = $("why");
+            if(why.value == ""){
+
+            }else{
+                alert(why.value);
+            }
+        }
     </script>
     </body>
 </html>

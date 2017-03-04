@@ -26,16 +26,15 @@ $row = mysql_fetch_assoc($res);
         <style type="text/css">
         body{
             font-family:"Microsoft Yahei";
-            background-color:rgb(245,245,245);
+        
+            background-image:url("../img/13.png");
         }
         .contain{
 
             width:900px;
             margin:100px auto;
         }
-        .sign{
-            background-color:#f8f7f7;
-        }
+        
         .msg2{
             color:#ff3333;
             background-color:#ffcc99;
@@ -50,6 +49,9 @@ $row = mysql_fetch_assoc($res);
             position:relative;
             top:6px;
             background-color:#f8f7f7;
+        }
+        .sign{
+            border:2px dashed rgb(200,200,200);
         }
         .list dd{
             margin-left:195px;
@@ -69,12 +71,13 @@ $row = mysql_fetch_assoc($res);
             font-size:40px;
         }
         .list input{
-            background-color:#f8f7f7;
+            background-color:rgb(240,240,240);
             font-size:25px;
             outline:medium;
             border:none;
             width:400px;
             height:50px;
+            border-radius:5px;
             border-bottom:1px solid rgb(200,200,200);
         }
         legend{
